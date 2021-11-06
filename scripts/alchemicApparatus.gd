@@ -25,3 +25,6 @@ func addRequirement(req):
 	
 func addCurrent(curr):
 	currentSubstances.append(curr)
+
+func interact():
+	pass

@@ -13,5 +13,6 @@ position = Vector2( 102, 114 )
 position = Vector2( 777, 399 )
 
 [node name="door" parent="." instance=ExtResource( 3 )]
-position = Vector2( 28, 548 )
+position = Vector2( 88, 573 )
+rotation = -1.5708
 scale = Vector2( -1, 1 )

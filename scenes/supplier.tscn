@@ -6,7 +6,8 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="door" parent="." instance=ExtResource( 2 )]
-position = Vector2( 993, 547 )
+position = Vector2( 944, 573 )
+rotation = 1.5708
 
 [node name="supGuy" parent="." instance=ExtResource( 1 )]
 position = Vector2( 880, 158 )

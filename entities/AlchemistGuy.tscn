@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://sprites/placeholders/alchyPlaceholder.png" type="Texture" id=1]
+[ext_resource path="res://scripts/AlchemistGuy.gd" type="Script" id=2]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -10,8 +11,45 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CircleShape2D" id=2]
+radius = 97.353
+
 [node name="AlchGuy" type="Area2D"]
 scale = Vector2( 0.85, 0.85 )
+script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Dialogue" type="ColorRect" parent="."]
+visible = false
+margin_left = 33.0
+margin_top = -54.0
+margin_right = 405.0
+margin_bottom = 50.0
+color = Color( 0.168627, 0.168627, 0.168627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="RichTextLabel" parent="Dialogue"]
+margin_left = 4.84748
+margin_top = 3.96612
+margin_right = 124.847
+margin_bottom = 22.9661
+text = "Alchemist"
+
+[node name="Text" type="RichTextLabel" parent="Dialogue"]
+margin_left = 5.0
+margin_top = 20.0
+margin_right = 367.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="area_entered" from="." to="." method="_on_AlchGuy_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_AlchGuy_area_exited"]

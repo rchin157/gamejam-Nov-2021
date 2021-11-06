@@ -5,6 +5,10 @@ export var xPad = 50
 export var yPad = 50
 var screen_size
 
+var heldItem = null
+
+var interactable = null
+var interacting = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,28 +18,58 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var velocity = Vector2()
-	if Input.is_action_pressed("ui_right"):
-		velocity.x = 1
-	if Input.is_action_pressed("ui_left"):
-		velocity.x = -1
-	if Input.is_action_pressed("ui_down"):
-		velocity.y = 1
-	if Input.is_action_pressed("ui_up"):
-		velocity.y = -1
-	if velocity.length() > 0:
-		velocity = velocity.normalized() * speed
-		#$AnimatedSprite.play()
+	if not interacting:
+		if Input.is_action_pressed("ui_right"):
+			velocity.x = 1
+		if Input.is_action_pressed("ui_left"):
+			velocity.x = -1
+		if Input.is_action_pressed("ui_down"):
+			velocity.y = 1
+		if Input.is_action_pressed("ui_up"):
+			velocity.y = -1
+		if velocity.length() > 0:
+			velocity = velocity.normalized() * speed
+			#$AnimatedSprite.play()
+		else:
+			#$AnimatedSprite.stop()
+			pass
+		position += velocity * delta
+		position.x = clamp(position.x, xPad, screen_size.x - xPad)
+		position.y = clamp(position.y, yPad, screen_size.y - yPad)
+	
+		# more animation stuff
+		if velocity.x != 0:
+			pass
+			#$AnimatedSprite.animation = "walk"
+			#$AnimatedSprite.flip_v = false
+			#$AnimatedSprite.flip_h = velocity.x < 0
+	
+		if Input.is_action_just_pressed("ui_select") and interactable != null:
+			interacting = true
+			interactable.interact()
+			print("interacted")
+			
 	else:
-		#$AnimatedSprite.stop()
-		pass
-	position += velocity * delta
-	position.x = clamp(position.x, xPad, screen_size.x - xPad)
-	position.y = clamp(position.y, yPad, screen_size.y - yPad)
+		if Input.is_action_just_pressed("ui_select"):
+			# signal the interaction to progress or close
+			interactable.progressInteraction()
+			pass
 	
-	# more animation stuff
-	if velocity.x != 0:
-		pass
-		#$AnimatedSprite.animation = "walk"
-		#$AnimatedSprite.flip_v = false
-		#$AnimatedSprite.flip_h = velocity.x < 0
-	
+func setHeldItem(item):
+	heldItem = item
+
+func getHeltItem():
+	return heldItem
+
+func dropItem():
+	heldItem = null
+
+func setInteractable(inter):
+	interactable = inter
+
+func finishInteraction():
+	interacting = false
+
+
+
+
