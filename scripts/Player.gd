@@ -32,3 +32,10 @@ func _process(delta):
 	position.x = clamp(position.x, xPad, screen_size.x - xPad)
 	position.y = clamp(position.y, yPad, screen_size.y - yPad)
 	
+	# more animation stuff
+	if velocity.x != 0:
+		pass
+		#$AnimatedSprite.animation = "walk"
+		#$AnimatedSprite.flip_v = false
+		#$AnimatedSprite.flip_h = velocity.x < 0
+	
