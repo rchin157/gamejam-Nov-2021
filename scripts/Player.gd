@@ -5,6 +5,8 @@ export var xPad = 50
 export var yPad = 50
 var screen_size
 
+var heldItem = null
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -39,3 +41,16 @@ func _process(delta):
 		#$AnimatedSprite.flip_v = false
 		#$AnimatedSprite.flip_h = velocity.x < 0
 	
+func setHeldItem(item):
+	heldItem = item
+
+func dropItem():
+	heldItem = null
+
+
+
+
+
+
+
+
