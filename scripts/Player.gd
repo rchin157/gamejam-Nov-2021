@@ -52,6 +52,7 @@ func _process(delta):
 	else:
 		if Input.is_action_just_pressed("ui_select"):
 			# signal the interaction to progress or close
+			interactable.progressInteraction()
 			pass
 	
 func setHeldItem(item):
