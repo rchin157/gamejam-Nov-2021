@@ -29,6 +29,7 @@ var rng = RandomNumberGenerator.new()
 # room change stuff
 # 0 = lab, 1 = supply, 2 = apparatus
 var previousRoom = 0
+var currentRoom = 0
 
 #enumerators for item properties
 enum resonances {NON,ANGLE,SINE,ERROR}

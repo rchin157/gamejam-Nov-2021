@@ -41,4 +41,5 @@ visible = false
 position = Vector2( 0.314616, 60.0933 )
 scale = Vector2( 0.25, 0.25 )
 frames = SubResource( 3 )
+frame = 1
 playing = true

@@ -14,6 +14,8 @@ func _ready():
 
 
 func _on_Door_area_entered(area):
+	Items.currentRoom = dest
+	Items.previousRoom = src
 	if dest == 0:
 		get_tree().change_scene("res://scenes/lab.tscn")
 	elif dest == 1:

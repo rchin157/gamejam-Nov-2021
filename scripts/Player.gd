@@ -1,8 +1,8 @@
 extends Area2D
 
 export var speed = 20 # pixels per second
-export var xPad = 50
-export var yPad = 50
+var xPad = 50
+var yPad = 50
 var screen_size
 
 
@@ -13,6 +13,10 @@ var interacting = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
+	if Items.currentRoom == 4:
+		yPad = 400
+	else:
+		yPad = 50
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
