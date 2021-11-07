@@ -20,9 +20,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="AlchGuy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 157.092, 211.471 )
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 439, 435 )
-
 [node name="door" parent="." instance=ExtResource( 3 )]
 position = Vector2( 124, 841 )
 rotation = -1.5708
@@ -38,3 +35,6 @@ scale = Vector2( 3, 3 )
 
 [node name="Book" parent="." instance=ExtResource( 6 )]
 position = Vector2( 583, 670 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 439, 435 )

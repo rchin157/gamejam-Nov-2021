@@ -225,13 +225,13 @@ func getInfoStrings(item):
 			results.append("something awful")
 	match item.color:
 		colors.BLUE:
-			results.append("青い")
+			results.append("sapphire")
 		colors.GREEN:
-			results.append("緑")
+			results.append("viridescent")
 		colors.RED:
-			results.append("赤い")
+			results.append("vermillion")
 		colors.YELLOW:
-			results.append("黄色")
+			results.append("butter like")
 	match item.tint:
 		shades.BRIGHT:
 			results.append("bright")
@@ -249,20 +249,14 @@ func getInfoStrings(item):
 	results.append(usedNames[item.ID])
 	match item.resonance:
 		resonances.ANGLE:
-			results.append("angle")
+			results.append("angular")
 		resonances.ERROR:
-			results.append("error")
+			results.append("immeasurable")
 		resonances.NON:
-			results.append("non")
+			results.append("non-resonant")
 		resonances.SINE:
-			results.append("sine")
+			results.append("sinusoidal")
 	return results
-
-
-
-
-
-
 
 
 

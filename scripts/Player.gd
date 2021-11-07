@@ -66,6 +66,10 @@ func dropItem():
 
 func setInteractable(inter):
 	interactable = inter
+	if inter != null:
+		$interactPrompt.show()
+	else:
+		$interactPrompt.hide()
 
 func finishInteraction():
 	interacting = false
