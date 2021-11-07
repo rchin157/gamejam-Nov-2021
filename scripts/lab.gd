@@ -10,6 +10,7 @@ var inventory
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Items.changeHeld(Items.heldItem)
 	inventory = get_node("InventoryView")
 	tables = [
 		get_node("PotionTable"),

@@ -20,7 +20,7 @@ func _process(delta):
 		if Input.is_action_just_pressed("ui_select") and interactable != null:
 			interacting = true
 			interactable.interact()
-			print("interacted")
+			#print("interacted")
 	else:
 		if Input.is_action_just_pressed("ui_select") and interactable != null:
 			# signal the interaction to progress or close
@@ -33,7 +33,7 @@ func _physics_process(delta):
 		velocity = Vector2(0,0)
 
 func _signalCaught():
-	print("Seeded")
+	#print("Seeded")
 	updateItemDisplay(Items.heldItem)
 
 func updateItemDisplay(item):

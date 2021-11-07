@@ -12,7 +12,7 @@ var totalPages = 0
 var pC
 
 var sentences = ["化学結合。 ", "煉金術是中世纪的一种化学哲学的思想和始祖，是当代化学的雏形。 ", "其目标是通過化學方法将一些基本金属转变为黃金，制造万灵药及制备长生不老药。 ", 
-	"现在的科学表明这种方法是行不通的。 ", "但是直到19世纪之前，煉金術尚未被科学证据所否定。 ", "包括艾萨克·牛顿在内的一些著名科学家都曾进行过煉金術尝试。 ", "現代化学的出现才使人们对煉金術的可能性产生了怀疑。 ", 
+	"现在的科学表明这种方法是行不通的。 ", "但是直到~世纪之前，煉金術尚未被科学证据所否定。 ", "包括艾萨克·牛顿在内的一些著名科学家都曾进行过煉金術尝试。 ", "現代化学的出现才使人们对煉金術的可能性产生了怀疑。 ", 
 	"西方的鍊金術。 ", "早期的鍊金術者的生活时代是从公元1世纪到5世纪。 ", "複数の物質に混合。 "]
 
 # Called when the node enters the scene tree for the first time.
@@ -22,6 +22,7 @@ func _ready():
 	$booklayer/book/HBoxContainer/left/HBoxContainer/Panel/Item/Name.hide()
 	$booklayer/book/HBoxContainer/right/HBoxContainer/Panel/Item/Name.hide()
 	totalPages = int(ceil(Items.allItems.size() / 2))
+	rng.randomize()
 	#print(totalPages)
 	#print(int(ceil(Items.allItems.size() / 2)))
 
@@ -92,7 +93,8 @@ func loadPgs():
 func generateDescr():
 	var result = ""
 	sentences.shuffle()
-	for i in range(4):
+	var numSents = rng.randi_range(2, sentences.size())
+	for i in range(numSents):
 		result = result + sentences[i]
 	#print(result)
 	return result

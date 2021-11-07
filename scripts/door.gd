@@ -16,6 +16,7 @@ func _ready():
 func _on_Door_area_entered(area):
 	Items.currentRoom = dest
 	Items.previousRoom = src
+	Items.r2Items.shuffle()
 	if src == 0:
 		Items.playerHasLeft = true
 	if dest == 0:

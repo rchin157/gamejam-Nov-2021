@@ -92,6 +92,8 @@ func gameStart():
 	lastStep = rng.randi_range(1, 6)
 	allVItems.shuffle()
 	
+	get_tree().change_scene("res://scenes/lab.tscn")
+	
 	changeHeld(null)
 	collectedSubstances = []
 	ingredientAdded = false
@@ -126,11 +128,10 @@ func compileAllItems():
 func _ready():
 	gameStart()
 	debugItems()
-	pass # Replace with function body.
 
 func changeHeld(item):
 	heldItem = item
-	print("Feeded")
+	#print("Feeded")
 	emit_signal("heldSwitched")
 
 func populateList(list,count):
@@ -315,9 +316,16 @@ func addSubstance(item):
 			potColour = Color(1,1,0)
 
 func checkWin():
+	for i in range(collectedSubstances.size()):
+		if collectedSubstances[i].ID != allVItems[i].ID:
+			return false
+	return true
+
+func win():
+	get_tree().change_scene()
+
+func lose():
 	pass
-
-
 
 
 
