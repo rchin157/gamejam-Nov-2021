@@ -21,6 +21,7 @@ func _ready():
 	pass # Replace with function body.
 
 func clearItems():
+	$ColorRect/ScrollContainer.set_v_scroll(0)
 	for i in range(itemList.size()):
 		itemLocation.remove_child(itemList[i])
 	itemList.clear()

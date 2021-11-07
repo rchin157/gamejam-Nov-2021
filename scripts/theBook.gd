@@ -9,6 +9,7 @@ var item2 = null
 var rng = RandomNumberGenerator.new()
 
 var totalPages = 0
+var pC
 
 var sentences = ["化学結合。 ", "煉金術是中世纪的一种化学哲学的思想和始祖，是当代化学的雏形。 ", "其目标是通過化學方法将一些基本金属转变为黃金，制造万灵药及制备长生不老药。 ", 
 	"现在的科学表明这种方法是行不通的。 ", "但是直到19世纪之前，煉金術尚未被科学证据所否定。 ", "包括艾萨克·牛顿在内的一些著名科学家都曾进行过煉金術尝试。 ", "現代化学的出现才使人们对煉金術的可能性产生了怀疑。 ", 
@@ -16,6 +17,7 @@ var sentences = ["化学結合。 ", "煉金術是中世纪的一种化学哲学
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	$booklayer/book.hide()
 	$booklayer/book/HBoxContainer/left/HBoxContainer/Panel/Item/Name.hide()
 	$booklayer/book/HBoxContainer/right/HBoxContainer/Panel/Item/Name.hide()
@@ -34,8 +36,10 @@ func _on_Book_area_exited(area):
 	player = null
 
 func interact():
+	$booklayer/PageCount.show()
 	$booklayer/book.show()
 	$booklayer/Button.show()
+	$booklayer/PageCount.set_text(String(page+1)+"/"+String(totalPages))
 	$booklayer/tip.show()
 	loadPgs()
 
@@ -47,8 +51,10 @@ func progressInteraction():
 	$booklayer/book/HBoxContainer/left/descr.set_text("")
 	$booklayer/book/HBoxContainer/right/descr.set_text("")
 	page = page + 1
+	$booklayer/PageCount.set_text(String(page+1)+"/"+String(totalPages))
 	if page > totalPages - 1:
 		page = 0
+		$booklayer/PageCount.hide()
 		$booklayer/book.hide()
 		$booklayer/Button.hide()
 		$booklayer/tip.hide()
@@ -58,6 +64,7 @@ func progressInteraction():
 
 func _on_Button_pressed():
 	page = 0
+	$booklayer/PageCount.hide()
 	$booklayer/book.hide()
 	$booklayer/Button.hide()
 	$booklayer/tip.hide()

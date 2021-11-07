@@ -66,6 +66,8 @@ var bookNames = {}
 #player item value
 var heldItem = null
 
+signal heldSwitched
+
 func gameStart():
 	if !sameSeed:
 		randomize();
@@ -104,6 +106,11 @@ func _ready():
 	gameStart()
 	debugItems()
 	pass # Replace with function body.
+
+func changeHeld(item):
+	heldItem = item
+	print("Feeded")
+	emit_signal("heldSwitched")
 
 func populateList(list,count):
 	list.clear()

@@ -31,13 +31,16 @@ __meta__ = {
 [node name="ScrollContainer" type="ScrollContainer" parent="ColorRect"]
 margin_right = 389.0
 margin_bottom = 599.0
+scroll_horizontal_enabled = false
+scroll_vertical = 90
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ItemContainer" type="VBoxContainer" parent="ColorRect/ScrollContainer"]
+margin_top = -90.0
 margin_right = 400.0
-margin_bottom = 2000.0
+margin_bottom = 1910.0
 rect_min_size = Vector2( 400, 2000 )
 size_flags_horizontal = 3
 size_flags_vertical = 3

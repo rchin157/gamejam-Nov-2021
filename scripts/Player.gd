@@ -10,6 +10,7 @@ var interacting = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Items.connect("heldSwitched",self,"_signalCaught")
 	screen_size = get_viewport_rect().size
 
 
@@ -31,12 +32,19 @@ func _physics_process(delta):
 		move_and_slide(velocity)
 		velocity = Vector2(0,0)
 
-func setHeldItem(item):
+func _signalCaught():
+	print("Seeded")
+	updateItemDisplay(Items.heldItem)
+
+func updateItemDisplay(item):
 	if item != null:
 		$Item.setAppearance(item)
 		$Item.show()
 	else:
 		$Item.hide()
+
+func setHeldItem(item):
+	updateItemDisplay(item)
 	Items.heldItem = item
 
 func getHeltItem():

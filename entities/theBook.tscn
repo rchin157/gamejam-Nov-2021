@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/theBook.gd" type="Script" id=1]
 [ext_resource path="res://entities/ItemObject.tscn" type="PackedScene" id=2]
@@ -22,6 +22,9 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=4]
@@ -80,8 +83,8 @@ rect_min_size = Vector2( 600, 0 )
 margin_right = 604.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 600, 50 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 autowrap = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="booklayer/book/HBoxContainer/left"]
@@ -103,16 +106,15 @@ margin_left = 254.0
 margin_right = 604.0
 margin_bottom = 250.0
 rect_min_size = Vector2( 350, 250 )
-custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 6 )
 
 [node name="descr" type="Label" parent="booklayer/book/HBoxContainer/left"]
-margin_left = 10.0
 margin_top = 308.0
 margin_right = 604.0
 margin_bottom = 342.0
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
 autowrap = true
 
 [node name="right" type="VBoxContainer" parent="booklayer/book/HBoxContainer"]
@@ -125,8 +127,8 @@ rect_min_size = Vector2( 600, 0 )
 margin_right = 604.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 600, 50 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 autowrap = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="booklayer/book/HBoxContainer/right"]
@@ -148,17 +150,29 @@ margin_left = 254.0
 margin_right = 604.0
 margin_bottom = 250.0
 rect_min_size = Vector2( 350, 250 )
-custom_fonts/font = SubResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 7 )
 
 [node name="descr" type="Label" parent="booklayer/book/HBoxContainer/right"]
-margin_left = 10.0
 margin_top = 308.0
 margin_right = 604.0
 margin_bottom = 342.0
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
 autowrap = true
+
+[node name="PageCount" type="RichTextLabel" parent="booklayer"]
+visible = false
+margin_left = 1270.03
+margin_top = 715.514
+margin_right = 1340.03
+margin_bottom = 763.514
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 9 )
+text = "Sneed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Button" type="Button" parent="booklayer"]
 visible = false
@@ -166,11 +180,11 @@ margin_left = 1212.17
 margin_top = 725.532
 margin_right = 1402.17
 margin_bottom = 794.532
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "Close"
 flat = true
 __meta__ = {
@@ -183,8 +197,8 @@ margin_left = 205.536
 margin_top = 773.408
 margin_right = 357.536
 margin_bottom = 796.408
-custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
 text = "Space to advance."
 __meta__ = {
 "_edit_use_anchors_": false

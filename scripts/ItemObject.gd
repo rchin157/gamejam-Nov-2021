@@ -75,6 +75,10 @@ func setAppearance(item):
 func enableButton():
 	button.set_visible(true)
 
-func _on_Button_presser():
-	Items.heldItem = ref
+	
+
+
+func _on_Button_pressed():
+	Items.changeHeld(ref)
+	pass # Replace with function body.
 	pass # Replace with function body.
