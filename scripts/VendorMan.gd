@@ -44,8 +44,8 @@ func startDrawing():
 	drawing.set_visible(true)
 
 func _on_Area2D_area_exited(area):
-	area.get_parent().setInteractable(self)
-	player = area.get_parent()
+	area.get_parent().setInteractable(null)
+	player = null
 	pass # Replace with function body.
 
 #validates that item is in suppliers pool
@@ -64,8 +64,8 @@ func interact():
 	pass
 
 func _on_Area2D_area_entered(area):
-	area.get_parent().setInteractable(null)
-	player = null
+	area.get_parent().setInteractable(self)
+	player = area.get_parent()
 	pass # Replace with function body.
 
 func hideText():

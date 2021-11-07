@@ -298,6 +298,9 @@ func getInfoStrings(item):
 
 func addSubstance(item):
 	#print(String(currentStep) + "/" + String(lastStep))
+	if item.ID == -1:
+		checkWin()
+		return
 	currentStep = currentStep + 1
 	collectedSubstances.append(item)
 	ingredientAdded = true
@@ -311,7 +314,8 @@ func addSubstance(item):
 		colors.YELLOW:
 			potColour = Color(1,1,0)
 
-
+func checkWin():
+	pass
 
 
 
