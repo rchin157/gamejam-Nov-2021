@@ -37,6 +37,7 @@ frames = ExtResource( 2 )
 frame = 1
 
 [node name="Button" type="Button" parent="."]
+visible = false
 margin_left = 99.7221
 margin_top = 31.7491
 margin_right = 267.722
