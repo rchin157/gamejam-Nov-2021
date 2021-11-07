@@ -1,37 +1,15 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://entities/ItemObject.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/Inventory Screen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scripts/BorisTest.gd" type="Script" id=2]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="Item" parent="." instance=ExtResource( 1 )]
-position = Vector2( 801.762, 311.186 )
-
-[node name="Item2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 991.118, 308.011 )
-
-[node name="Item3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1185.62, 308.4 )
-
-[node name="Item4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 577.289, 316.337 )
-
-[node name="Item5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 359.554, 309.599 )
-
-[node name="Item6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 799.519, 626.973 )
-
-[node name="Item7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 999.987, 633.323 )
-
-[node name="Item8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1205.61, 635.299 )
-
-[node name="Item9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 570.284, 622.6 )
-
-[node name="Item10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 362.074, 620.624 )
+[node name="Control" parent="." instance=ExtResource( 1 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 793.215
+margin_top = 402.613
+margin_right = 793.215
+margin_bottom = 402.613

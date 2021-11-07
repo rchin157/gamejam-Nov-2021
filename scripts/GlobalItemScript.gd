@@ -39,16 +39,21 @@ enum shapes {ERLENMEYER,FLORENCE,JAG,BOX}
 enum shades {DARK,BRIGHT}
 #Compoenents for name generation
 
-var prefix2 = ["Very","Partially","Significantly","Neglibly","Mostly","Slightly","Mildly","Lukewarm","Boiling","Epic","Un-Epic","","Unremarkable","2%","Old","Big"]
+var prefix2 = ["Very","Partially","Significantly","Neglibly","Mostly","Slightly","Mildly","Fancy","Lukewarm","Boiling","Epic","Un-Epic",""
+,"Unremarkable","2%","Old","Big","The","Potentially","Gigantic","Relevantly","Bootleg","Illegal","Verifiably","Irreparably"
+,"Unfathomably","Cursed","Holy","Cozy","Especially"]
 
 var prefix = ["Irradiated","Highly Innervated","Hydrogenated","Phosphorylated","Refined","Fragile","Suspiscious","Peculiar","Aerobic",
 "Saturated","Filtered","Strained","Based","Fundamental","Nucleated","Freudian","Oedipal","Delicious","Broken","Whimsical","Acidic",
 "Supercooled","Distilled","Ultraviolet","Beta","Concentrated","Seeded","Feeded","Bugged","Logarithmic","Alpha","Kino","Redeemed",
-"Isotropic","Gram Blasted","Diluted","Infinite","Homogenized","Recrystallized","Fermented","Elastic","Superheated","Chiral","Achiral"]
+"Isotropic","Gram Blasted","Diluted","Infinite","Homogenized","Recrystallized","Fermented","Elastic","Superheated","Chiral","Achiral",
+"German-Import","Seething","Friendly","Dwarven","Allopatric","Pickled","Contagious","Viral","Pathetic","Flaccid","Moist","Turgid",
+"Flammable","Inflammable","Ductile","Malleable","Volatile","Fuming","Impartial","Inelastic","Rigid","Oxidized","Reduced","Polar","Malicious",
+"Carcinogenic","Exorcised","Dissociated","Thick","Devious","Questionable",""]
 
 var suffix = ["Ether","Ichor","Tofu","Benzoate","Aspic","Soylent","Talc","Mercury","Cinnabar","Quicksilver","Argentum","Banium","Wire","Kino",
 "Ilnam","Sneedium","Chuckide","Susium","Glyceride","Alcohol","Sulfate","Yornce","Lewis","Oongul","Cope","Plasma","Sap","Love","Pheromone",
-"青い","緑","Milk","Jaffa Cake"]
+"青い","緑","Milk","Jaffa Cake","Bile","Salt","Brine","Water","Paste","Rick","Moonshine","Substance","Diamond","Budder","Bazinga"]
 
 #Lists for all valid names and names in use dict
 

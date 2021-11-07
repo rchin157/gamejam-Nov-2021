@@ -7,15 +7,20 @@ extends Node2D
 var fill
 var frame
 var nameTag
+var buttonListener = null
+var button
+var ref
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	fill = get_node("Fill")
 	frame = get_node("Frame")
 	nameTag = get_node("Name")
+	button = get_node("Button")
 	pass # Replace with function body.
 
 func setAppearance(item):
+	ref = item
 	var s = item.shape
 	var c = item.color
 	var t = item.tint
@@ -66,3 +71,10 @@ func setAppearance(item):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func enableButton():
+	button.set_visible(true)
+
+func _on_Button_presser():
+	Items.heldItem = ref
+	pass # Replace with function body.

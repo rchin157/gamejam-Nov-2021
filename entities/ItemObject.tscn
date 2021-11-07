@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://sprites/Items/Flasks.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://sprites/Items/Fills.tres" type="SpriteFrames" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://font/FUTENE.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 4 )
 
 [node name="Item" type="Node2D"]
@@ -32,3 +35,17 @@ modulate = Color( 1, 0.866667, 0, 1 )
 scale = Vector2( 10, 10 )
 frames = ExtResource( 2 )
 frame = 1
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_left = 87.2975
+margin_top = 29.8934
+margin_right = 232.297
+margin_bottom = 183.893
+custom_fonts/font = SubResource( 2 )
+text = "Obtain Item"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
