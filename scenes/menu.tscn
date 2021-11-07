@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://font/FUTENE.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://scripts/menu.gd" type="Script" id=2]
+[ext_resource path="res://sprites/Tileset/jam3menuscreen.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 48
@@ -28,19 +29,18 @@ script = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-margin_right = 1607.0
-margin_bottom = 904.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_top = -53.3936
+margin_right = 1719.0
+margin_bottom = 945.606
+texture = ExtResource( 3 )
+expand = true
 
 [node name="Start" type="Button" parent="CanvasLayer"]
-margin_left = 612.294
-margin_top = 435.326
-margin_right = 970.294
-margin_bottom = 559.326
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+margin_left = -76.483
+margin_top = 475.371
+margin_right = 281.517
+margin_bottom = 599.371
 custom_fonts/font = SubResource( 1 )
 text = "Start"
 flat = true
@@ -49,11 +49,10 @@ __meta__ = {
 }
 
 [node name="Instructions" type="Button" parent="CanvasLayer"]
-margin_left = 612.294
-margin_top = 600.0
-margin_right = 970.294
-margin_bottom = 724.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+margin_left = 12.9512
+margin_top = 561.29
+margin_right = 370.951
+margin_bottom = 685.29
 custom_fonts/font = SubResource( 2 )
 text = "Instructions"
 flat = true
@@ -61,12 +60,23 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Story" type="Button" parent="CanvasLayer"]
+margin_left = -77.8179
+margin_top = 645.272
+margin_right = 280.182
+margin_bottom = 769.272
+custom_fonts/font = SubResource( 2 )
+text = "Story"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-margin_left = 448.679
-margin_top = 248.321
-margin_right = 1179.68
-margin_bottom = 341.321
-custom_colors/default_color = Color( 0, 0, 0, 1 )
+margin_left = 22.8652
+margin_top = 24.068
+margin_right = 753.866
+margin_bottom = 117.068
 custom_fonts/normal_font = SubResource( 3 )
 text = "A Dash of Fulminate"
 __meta__ = {
@@ -86,8 +96,8 @@ margin_left = 20.0
 margin_top = 26.0
 margin_right = 1417.0
 margin_bottom = 380.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Talk to the alchemist to find out which substance you need next.
 The substance supplier will have any  substances not present in the drawers."
 __meta__ = {
@@ -99,8 +109,8 @@ margin_left = 20.6336
 margin_top = 258.923
 margin_right = 1006.63
 margin_bottom = 612.923
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Movements - Arrow Keys
 Interact/Advance - Space
 Other Interactions - Mouse"
@@ -113,8 +123,43 @@ margin_left = 1351.03
 margin_top = 799.108
 margin_right = 1579.03
 margin_bottom = 875.108
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Close"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StoryPanel" type="ColorRect" parent="CanvasLayer"]
+visible = false
+margin_right = 1611.0
+margin_bottom = 913.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text" type="RichTextLabel" parent="CanvasLayer/StoryPanel"]
+margin_left = 20.6336
+margin_top = 258.923
+margin_right = 1006.63
+margin_bottom = 612.923
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "You, Fenk, are apprenticed to the renowned master alchemist Thalmun Doffys. After months of theory and education, it is now time to put your learning to the test-- your very first alchemical transmutation is here! Your task is simple: synthesize a panacea capable of curing your embarassingly triangular head.
+
+Unfortunately, your master has recently lost his eyesight. Regardless, his ongoing instruction will prove tantamount to your eventual alchemic success. Heed his words wisely, lest you make a grave error. Even a dash of fulminate is enough to cause a hellishly destructive explosion."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close" type="Button" parent="CanvasLayer/StoryPanel"]
+margin_left = 1351.03
+margin_top = 799.108
+margin_right = 1579.03
+margin_bottom = 875.108
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Close"
 flat = true
 __meta__ = {
@@ -125,4 +170,6 @@ __meta__ = {
 [connection signal="pressed" from="CanvasLayer/Start" to="CanvasLayer/Instructions" method="_on_Start_pressed"]
 [connection signal="pressed" from="CanvasLayer/Instructions" to="." method="_on_Instructions_pressed"]
 [connection signal="pressed" from="CanvasLayer/Instructions" to="CanvasLayer/Instructions" method="_on_Instructions_pressed"]
+[connection signal="pressed" from="CanvasLayer/Story" to="." method="_on_Story_pressed"]
 [connection signal="pressed" from="CanvasLayer/InstructionsPanel/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="CanvasLayer/StoryPanel/close" to="." method="_on_close_pressed"]

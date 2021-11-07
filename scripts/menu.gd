@@ -18,3 +18,8 @@ func _on_Instructions_pressed():
 
 func _on_close_pressed():
 	$CanvasLayer/InstructionsPanel.hide()
+	$CanvasLayer/StoryPanel.hide()
+
+
+func _on_Story_pressed():
+	$CanvasLayer/StoryPanel.show()

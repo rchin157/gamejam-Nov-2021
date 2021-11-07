@@ -34,7 +34,7 @@ func interact():
 				if dopt == 0:
 					currentHint = "Go get a dash of %s and put it in the pot" % details[4]
 				else:
-					currentHint = "Procure %s. And make quick." % details[4]
+					currentHint = "Procure %s. And make it quick." % details[4]
 				say(currentHint)
 			elif option == 1:
 				# ask by description

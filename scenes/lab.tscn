@@ -118,7 +118,7 @@ margin_top = 11.0
 margin_right = 689.0
 margin_bottom = 148.0
 custom_fonts/normal_font = SubResource( 5 )
-text = "Whenever you leave, I've taken the liberty of reorganizing the supplies. No need to thank me."
+text = "I've taken the liberty of reorganizing the supplies. No need to thank me. Don't worry, I'll be sure to do it every time you leave from now on too."
 
 [node name="closePrompt" type="Button" parent="CanvasLayer/ColorRect"]
 margin_left = 591.536
