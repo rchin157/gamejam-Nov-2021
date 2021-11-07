@@ -39,22 +39,22 @@ func interact():
 				# ask by description
 				var dopt = rng.randi_range(0, 1)
 				if dopt == 0:
-					currentHint = "Go get a dash of... whatever that %s %s substance is, in the %s flask. It smells %s. I can't be foggled to remember the name." % [details[2], details[1], details[3], details[0]]
+					currentHint = "Go get a dash of... whatever that %s %s substance is, in the %s flask. It smells %s and the resonance should be %s. I can't be foggled to remember the name." % [details[2], details[1], details[3], details[0], details[5]]
 				else:
-					currentHint = "Find some of that %s %s substance in the %s flask. Smells %s. You know the one. At least you should." % [details[2], details[1], details[3], details[0]]
+					currentHint = "Find some of that %s %s substance in the %s flask. Smells %s and has %s resonance. You know the one. At least you should." % [details[2], details[1], details[3], details[0], details[5]]
 				say(currentHint)
 			else:
 				# ask by alternate name
 				var dopt = rng.randi_range(0, 1)
 				if dopt == 0:
-					currentHint = "Next is a dash of %s, or at least something similar. Go on then." % "insert bullshit name"
+					currentHint = "Next is a dash of %s, or at least something similar. Go on then." % Items.bookNames[nextItem.ID]
 				else:
-					currentHint = "A substance similar to %s. Go get it." % "insert bullshit name here"
+					currentHint = "A substance similar to %s. Go get it." % Items.bookNames[nextItem.ID]
 				say(currentHint)
 		
 	else:
 		# tell them to fuck off
-		say("Didn't you hear me the first time? %s Get on with it." % currentHint)
+		say("Didn't you hear me the first time? %s Now get on with it." % currentHint)
 
 
 func _on_AlchGuy_area_entered(area):
