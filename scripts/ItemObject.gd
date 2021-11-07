@@ -20,6 +20,11 @@ func _ready():
 	pass # Replace with function body.
 
 func setAppearance(item):
+	if item.ID == -1:
+		fill.hide()
+		frame.frame = 4
+		return
+	
 	ref = item
 	var s = item.shape
 	var c = item.color

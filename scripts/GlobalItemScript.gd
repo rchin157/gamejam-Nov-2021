@@ -28,6 +28,7 @@ var rng = RandomNumberGenerator.new()
 var ingredientAdded = false
 var collectedSubstances = []
 var potColour = Color(1, 1, 1)
+var fulminate
 
 # room change stuff
 # 0 = lab, 1 = supply, 2 = apparatus
@@ -87,6 +88,7 @@ func gameStart():
 	populateList(bItems,10)
 	compileAllItems()
 	
+	rng.randomize()
 	lastStep = rng.randi_range(1, 6)
 	allVItems.shuffle()
 	
@@ -98,6 +100,9 @@ func gameStart():
 	currentRoom = 0
 	playerHasLeft = false
 	reorganizeExplained = false
+	
+	fulminate = itemObject.new()
+	fulminate.ID = -1
 	
 
 #This method is for debugging purposes
@@ -292,6 +297,8 @@ func getInfoStrings(item):
 	return results
 
 func addSubstance(item):
+	#print(String(currentStep) + "/" + String(lastStep))
+	currentStep = currentStep + 1
 	collectedSubstances.append(item)
 	ingredientAdded = true
 	match item.color:

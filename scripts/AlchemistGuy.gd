@@ -20,10 +20,10 @@ func interact():
 	if Items.ingredientAdded or Items.currentStep == -1:
 		if Items.currentStep == Items.lastStep:
 			#show end of game dialogue
-			say("Thats everything, finish it off with a dash of fulminate.")
+			say("Thats everything, finish it off with a dash of this fulminate.")
+			Items.changeHeld(Items.fulminate)
 		else:
 			# give new hint
-			Items.currentStep = Items.currentStep + 1
 			Items.ingredientAdded = false
 			var nextItem = Items.getRequirement(Items.currentStep)
 			var details = Items.getInfoStrings(nextItem)
