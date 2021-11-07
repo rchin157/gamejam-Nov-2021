@@ -24,6 +24,9 @@ func setAppearance(item):
 		fill.hide()
 		frame.frame = 4
 		return
+	else:
+		fill.show()
+		
 	
 	ref = item
 	var s = item.shape

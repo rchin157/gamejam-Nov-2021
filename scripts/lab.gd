@@ -11,8 +11,11 @@ var inventory
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#RYLAN LOOK HERE FOR SONGS
-	Sfx.stopSongs()
-	Sfx.enableSong(1)
+	if not Sfx.isPlaying(1):
+		Sfx.stopSongs()
+		Sfx.enableSong(1)
+		
+	
 	
 	Items.changeHeld(Items.heldItem)
 	inventory = get_node("InventoryView")

@@ -33,8 +33,11 @@ func stopSFX(index):
 	sfxArray[index].stop()
 
 func enableSong(index: int):
-	musicArray[index].play(musicArray[1].get_playback_position())
-	
+	musicArray[index].play(0)
+
+func isPlaying(index: int):
+	return musicArray[index].playing
+
 func stopSong(index: int):
 	musicArray[index].stop();
 	

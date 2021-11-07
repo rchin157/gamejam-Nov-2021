@@ -86,7 +86,7 @@ func gameStart():
 	regenerateItemList()
 	
 	populateList(r1Items,96)
-	populateList(r2Items,10)
+	populateList(r2Items,35)
 	populateList(bItems,10)
 	compileAllItems()
 	
