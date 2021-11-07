@@ -18,8 +18,13 @@ var r1Items = [];
 var r2Items = [];
 var bItems = [];
 
-var allItems =[];
+var allItems = [];
 var allVItems = [];
+
+# recipe progress tracking
+var currentStep = -1
+var lastStep
+var rng = RandomNumberGenerator.new()
 
 #enumerators for item properties
 enum smells {NEUTRAL,GOOD,BAD,CONFUSE}
@@ -54,10 +59,11 @@ func gameStart():
 	populateList(bItems,10)
 	compileAllItems()
 	
-	#This method is for debugging purposes
-	
+	lastStep = rng.randi_range(1, 20)
+	allVItems.shuffle()
 	
 
+#This method is for debugging purposes
 func debugItems():
 	print(r1Items[0])
 	print(r2Items[0])
@@ -172,3 +178,79 @@ class itemObject:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func getRequirement(step):
+	return allVItems[step]
+
+# smell = 0, color = 1, shade = 2, shape = 3, name = 4
+func getInfoStrings(item):
+	var results = []
+	match item.smell:
+		smells.NEUTRAL:
+			results.append("neutral")
+		smells.GOOD:
+			results.append("pleasant")
+		smells.CONFUSE:
+			results.append("odd")
+		smells.BAD:
+			results.append("something awful")
+	match item.color:
+		colors.BLUE:
+			results.append("青い")
+		colors.GREEN:
+			results.append("緑")
+		colors.RED:
+			results.append("赤い")
+		colors.YELLOW:
+			results.append("黄色")
+	match item.tint:
+		shades.BRIGHT:
+			results.append("bright")
+		shades.DARK:
+			results.append("dark")
+	match item.shape:
+		shapes.BOX:
+			results.append("boxy")
+		shapes.ERLENMEYER:
+			results.append("erlenmeyer")
+		shapes.FLORENCE:
+			results.append("florence")
+		shapes.JAG:
+			results.append("jagged")
+	results.append(usedNames[item.ID])
+	return results
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

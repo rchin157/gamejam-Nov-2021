@@ -10,9 +10,9 @@
 position = Vector2( 102, 114 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 777, 399 )
+position = Vector2( 439, 435 )
 
 [node name="door" parent="." instance=ExtResource( 3 )]
-position = Vector2( 88, 573 )
+position = Vector2( 124, 841 )
 rotation = -1.5708
-scale = Vector2( -1, 1 )
+scale = Vector2( -2, 2 )
