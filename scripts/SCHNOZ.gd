@@ -19,9 +19,9 @@ func _ready():
 
 func _on_Area2D_area_entered(area):
 	Sfx.playSFX(0)
-	print(Items.heldItem)
+	#print(Items.heldItem)
 	if Items.heldItem:
-		print(Items.heldItem.smell)
+		#print(Items.heldItem.smell)
 		match Items.heldItem.smell:
 			Items.smells.GOOD:
 				self.frame = 1

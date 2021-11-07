@@ -26,7 +26,7 @@ func generateRecipe():
 	for i in range(Items.lastStep+1):
 		winText = winText+Items.usedNames[Items.allVItems[i].ID]+",\n\n"
 	winText = winText+"and finally...\n A Dash of Fulminate"
-	print(Items.lastStep)
+	#print(Items.lastStep)
 	recipe.set_text(winText)
 	recipe.show()
 
