@@ -23,7 +23,7 @@ font_data = ExtResource( 1 )
 size = 40
 font_data = ExtResource( 1 )
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -40,8 +40,8 @@ margin_left = 612.294
 margin_top = 435.326
 margin_right = 970.294
 margin_bottom = 559.326
-custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "Start"
 flat = true
 __meta__ = {
@@ -53,8 +53,8 @@ margin_left = 612.294
 margin_top = 600.0
 margin_right = 970.294
 margin_bottom = 724.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Instructions"
 flat = true
 __meta__ = {
@@ -66,8 +66,8 @@ margin_left = 448.679
 margin_top = 248.321
 margin_right = 1179.68
 margin_bottom = 341.321
-custom_fonts/normal_font = SubResource( 3 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 3 )
 text = "A Dash of Fulminate"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -85,8 +85,8 @@ margin_left = 20.0
 margin_top = 26.0
 margin_right = 1417.0
 margin_bottom = 380.0
-custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
 text = "Talk to the alchemist to find out which substance you need next.
 The substance supplier will have any  substances not present in the drawers."
 __meta__ = {
@@ -98,8 +98,8 @@ margin_left = 20.6336
 margin_top = 258.923
 margin_right = 1006.63
 margin_bottom = 612.923
-custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 4 )
 text = "Movements - Arrow Keys
 Interact/Advance - Space
 Other Interactions - Mouse"
@@ -112,8 +112,8 @@ margin_left = 1351.03
 margin_top = 799.108
 margin_right = 1579.03
 margin_bottom = 875.108
-custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
 text = "Close"
 flat = true
 __meta__ = {

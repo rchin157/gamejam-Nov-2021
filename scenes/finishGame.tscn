@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scripts/finishGame.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Tileset/jam3endcg.png" type="Texture" id=2]
@@ -51,6 +51,31 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=16]
 size = 32
+font_data = ExtResource( 3 )
+
+[sub_resource type="Gradient" id=17]
+offsets = PoolRealArray( 0, 0.391304, 0.583851, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.459627, 0.459627, 0.459627, 1, 0.583851, 0.583851, 0.583851, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=18]
+gradient = SubResource( 17 )
+
+[sub_resource type="ParticlesMaterial" id=19]
+emission_shape = 1
+emission_sphere_radius = 38.64
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 90, 0 )
+initial_velocity = 500.0
+initial_velocity_random = 0.68
+angular_velocity = 180.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 20.61
+color_ramp = SubResource( 18 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 24
 font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
@@ -118,6 +143,29 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 16 )
 text = "Continue"
 flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Particles2D" type="Particles2D" parent="CanvasLayer"]
+visible = false
+position = Vector2( 220.866, 887.241 )
+amount = 64
+process_material = SubResource( 19 )
+
+[node name="Particles2D2" type="Particles2D" parent="CanvasLayer"]
+visible = false
+position = Vector2( 1444.13, 892.904 )
+amount = 64
+process_material = SubResource( 19 )
+
+[node name="Recipe" type="RichTextLabel" parent="CanvasLayer"]
+visible = false
+margin_left = 1228.0
+margin_top = 44.0
+margin_right = 1580.0
+margin_bottom = 871.0
+custom_fonts/normal_font = SubResource( 20 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
