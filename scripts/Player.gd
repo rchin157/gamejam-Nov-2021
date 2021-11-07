@@ -32,6 +32,11 @@ func _physics_process(delta):
 		velocity = Vector2(0,0)
 
 func setHeldItem(item):
+	if item != null:
+		$Item.setAppearance(item)
+		$Item.show()
+	else:
+		$Item.hide()
 	Items.heldItem = item
 
 func getHeltItem():

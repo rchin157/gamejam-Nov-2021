@@ -1,9 +1,10 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Entities/jam3character.png" type="Texture" id=2]
 [ext_resource path="res://sprites/placeholders/interactPrompt0.png" type="Texture" id=3]
 [ext_resource path="res://sprites/placeholders/interactPrompt1.png" type="Texture" id=4]
+[ext_resource path="res://entities/ItemObject.tscn" type="PackedScene" id=5]
 
 [sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 2 )
@@ -132,3 +133,8 @@ shape = SubResource( 2 )
 [node name="actualCollider" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 40 )
 shape = SubResource( 24 )
+
+[node name="Item" parent="." instance=ExtResource( 5 )]
+visible = false
+position = Vector2( 2.29384, -124.973 )
+scale = Vector2( 0.3, 0.3 )

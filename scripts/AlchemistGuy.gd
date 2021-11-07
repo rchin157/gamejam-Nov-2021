@@ -60,7 +60,7 @@ func interact():
 func _on_AlchGuy_area_entered(area):
 	#print("alchguy enter")
 	area.get_parent().setInteractable(self)
-	player = area
+	player = area.get_parent()
 
 
 func _on_AlchGuy_area_exited(area):

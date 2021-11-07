@@ -24,14 +24,9 @@ func _ready():
 	#print(int(ceil(Items.allItems.size() / 2)))
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
 func _on_Book_area_entered(area):
 	area.get_parent().setInteractable(self)
-	player = area
+	player = area.get_parent()
 
 
 func _on_Book_area_exited(area):
@@ -43,9 +38,6 @@ func interact():
 	$booklayer/Button.show()
 	$booklayer/tip.show()
 	loadPgs()
-	
-func say():
-	pass
 
 func progressInteraction():
 	$booklayer/book/HBoxContainer/left/HBoxContainer/Panel/Item.hide()
