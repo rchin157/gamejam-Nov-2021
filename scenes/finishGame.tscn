@@ -82,6 +82,14 @@ margin_right = 1571.38
 margin_bottom = 871.367
 custom_fonts/normal_font = SubResource( 15 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "You've done it, Fenk! Your first foray into practical alchemy has been greatly successful!
+
+You have successfully transmuted a panacea capable of curing your oh-so-ugly triangular-headedness. Now you can live happilly alongside those others with rotund skulls.
+
+If it weren't for your incredible ability to listen to directions, this could have gone horribly wrong. Nevertheless, you prevailled.
+
+
+A dash of fulminate was all you needed to succeed."
 
 [node name="losetext" type="RichTextLabel" parent="CanvasLayer/ColorRect"]
 visible = false
@@ -91,6 +99,14 @@ margin_right = 1571.38
 margin_bottom = 871.367
 custom_fonts/normal_font = SubResource( 15 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Alas, Fenk. Your alchemic experiment was an incredible failure.
+
+You have proven yourself to be incapable of transmuting that which you yearned for. The de-triangulating panacea you attempted to produce instead became an explosive mess. In your quest to lose an embarrassing head shape, you instead lost your life.
+
+What a sad outcome this is. Deserved perhaps, but sad.
+
+
+A dash of fulminate proved too powerful for an apprentice such as yourself."
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 visible = false
