@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bookPlaceholder.png-1918636ea446dd0f95ccfac9af0c4ed0.stex"
+path="res://.import/jam3tileset.png-bd69a18325d122ebd3e80fbb04810516.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/placeholders/bookPlaceholder.png"
-dest_files=[ "res://.import/bookPlaceholder.png-1918636ea446dd0f95ccfac9af0c4ed0.stex" ]
+source_file="res://sprites/Tileset/jam3tileset.png"
+dest_files=[ "res://.import/jam3tileset.png-bd69a18325d122ebd3e80fbb04810516.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
