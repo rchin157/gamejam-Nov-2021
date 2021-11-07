@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://entities/SupplierGuy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://entities/VendorMan.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/Tileset/LevelSet.tres" type="TileSet" id=3]
+[ext_resource path="res://entities/player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/SCHNOZ.tscn" type="PackedScene" id=5]
+[ext_resource path="res://entities/SneedMachine.tscn" type="PackedScene" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,5 +19,17 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 [node name="door" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1450.23, 844.636 )
 
-[node name="supGuy" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1515.31, 354.431 )
+[node name="VendorMan" parent="." instance=ExtResource( 1 )]
+position = Vector2( 237.27, 314.849 )
+scale = Vector2( 2.93464, 2.73622 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1448.46, 711.699 )
+
+[node name="SCHNOZ" parent="." instance=ExtResource( 5 )]
+position = Vector2( 674.599, 262.464 )
+scale = Vector2( 4.39803, 3.87716 )
+
+[node name="TestMachine" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1249.24, 281.513 )
+scale = Vector2( 2.61221, 2.53779 )

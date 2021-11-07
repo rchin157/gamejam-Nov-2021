@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jam3tileset.png-bd69a18325d122ebd3e80fbb04810516.stex"
+path="res://.import/DrawingCircle.png-0b7f376bdaea2d5aa1668f1ad20043f1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Tileset/jam3tileset.png"
-dest_files=[ "res://.import/jam3tileset.png-bd69a18325d122ebd3e80fbb04810516.stex" ]
+source_file="res://sprites/Tileset/DrawingCircle.png"
+dest_files=[ "res://.import/DrawingCircle.png-0b7f376bdaea2d5aa1668f1ad20043f1.stex" ]
 
 [params]
 

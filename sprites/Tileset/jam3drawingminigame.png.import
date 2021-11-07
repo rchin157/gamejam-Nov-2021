@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jam3tileset.png-bd69a18325d122ebd3e80fbb04810516.stex"
+path="res://.import/jam3drawingminigame.png-06ab9558bcf33591db86c292db7a5fa5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Tileset/jam3tileset.png"
-dest_files=[ "res://.import/jam3tileset.png-bd69a18325d122ebd3e80fbb04810516.stex" ]
+source_file="res://sprites/Tileset/jam3drawingminigame.png"
+dest_files=[ "res://.import/jam3drawingminigame.png-06ab9558bcf33591db86c292db7a5fa5.stex" ]
 
 [params]
 
