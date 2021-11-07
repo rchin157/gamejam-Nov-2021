@@ -20,8 +20,8 @@ func _ready():
 	$booklayer/book/HBoxContainer/left/HBoxContainer/Panel/Item/Name.hide()
 	$booklayer/book/HBoxContainer/right/HBoxContainer/Panel/Item/Name.hide()
 	totalPages = int(ceil(Items.allItems.size() / 2))
-	print(totalPages)
-	print(int(ceil(Items.allItems.size() / 2)))
+	#print(totalPages)
+	#print(int(ceil(Items.allItems.size() / 2)))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -55,7 +55,7 @@ func progressInteraction():
 	$booklayer/book/HBoxContainer/left/descr.set_text("")
 	$booklayer/book/HBoxContainer/right/descr.set_text("")
 	page = page + 1
-	if page > totalPages:
+	if page > totalPages - 1:
 		page = 0
 		$booklayer/book.hide()
 		$booklayer/Button.hide()
@@ -72,6 +72,7 @@ func _on_Button_pressed():
 	player.finishInteraction()
 
 func loadPgs():
+	#print("item %s and %s" % [page * 2, page * 2 + 1])
 	item1 = Items.allItems[page * 2]
 	var details1 = Items.getInfoStrings(item1)
 	$booklayer/book/HBoxContainer/left/name.set_text(Items.bookNames[item1.ID])
