@@ -21,11 +21,12 @@ func _on_AnimatedSprite_animation_finished():
 
 
 func _on_Button_pressed():
-	if Items.win:
-		if not onText:
-			onText = true
-			$CanvasLayer/ColorRect.show()
+	if not onText:
+		onText = true
+		$CanvasLayer/ColorRect.show()
+		if Items.win:
+			$CanvasLayer/ColorRect/wintext.show()
 		else:
-			get_tree().change_scene("res://scenes/lab.tscn")
+			$CanvasLayer/ColorRect/losetext.show()
 	else:
-		get_tree().change_scene("res://scenes/lab.tscn")
+		get_tree().change_scene("res://scenes/menu.tscn")

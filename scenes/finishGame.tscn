@@ -74,7 +74,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/ColorRect"]
+[node name="wintext" type="RichTextLabel" parent="CanvasLayer/ColorRect"]
+visible = false
+margin_left = 45.3845
+margin_top = 29.3665
+margin_right = 1571.38
+margin_bottom = 871.367
+custom_fonts/normal_font = SubResource( 15 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+
+[node name="losetext" type="RichTextLabel" parent="CanvasLayer/ColorRect"]
+visible = false
 margin_left = 45.3845
 margin_top = 29.3665
 margin_right = 1571.38
