@@ -51,3 +51,5 @@ margin_top = 513.757
 margin_right = 537.622
 margin_bottom = 602.757
 text = "Close"
+
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_Button_pressed"]

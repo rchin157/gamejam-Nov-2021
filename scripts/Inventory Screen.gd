@@ -4,7 +4,7 @@ extends Control
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
+var notify
 var itemList = []
 var itemSpawn = load("res://entities/ItemObject.tscn")
 var scrollWindow
@@ -25,6 +25,9 @@ func clearItems():
 		itemLocation.remove_child(itemList[i])
 	itemList.clear()
 
+func setPlayer(player):
+	notify = player
+
 func setItems(list):
 	for i in range(list.size()):
 		var spawn = itemSpawn.instance()
@@ -38,3 +41,10 @@ func setItems(list):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Button_pressed():
+	set_visible(false)
+	clearItems()
+	notify.finishInteraction()
+	pass # Replace with function body.

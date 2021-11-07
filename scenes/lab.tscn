@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://entities/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/AlchemistGuy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://entities/door.tscn" type="PackedScene" id=3]
 [ext_resource path="res://entities/PotionTable.tscn" type="PackedScene" id=4]
+[ext_resource path="res://entities/Inventory Screen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://entities/theBook.tscn" type="PackedScene" id=6]
 [ext_resource path="res://sprites/Tileset/LevelSet.tres" type="TileSet" id=7]
 [ext_resource path="res://scripts/lab.gd" type="Script" id=8]
@@ -40,9 +41,6 @@ dest = 4
 
 [node name="Book" parent="." instance=ExtResource( 6 )]
 position = Vector2( 527.564, 268.085 )
-
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1397.8, 477.837 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
@@ -81,3 +79,13 @@ position = Vector2( 1505.47, 672.586 )
 
 [node name="PotionTable3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 855.204, 816.424 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1397.8, 477.837 )
+
+[node name="InventoryView" parent="." instance=ExtResource( 5 )]
+visible = false
+margin_left = 803.762
+margin_top = 562.742
+margin_right = 803.762
+margin_bottom = 562.742

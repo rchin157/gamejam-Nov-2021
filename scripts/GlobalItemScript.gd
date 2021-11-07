@@ -73,7 +73,7 @@ func gameStart():
 	regenerateNameDicts()
 	regenerateItemList()
 	
-	populateList(r1Items,20)
+	populateList(r1Items,96)
 	populateList(r2Items,10)
 	populateList(bItems,10)
 	compileAllItems()
