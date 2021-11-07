@@ -18,6 +18,7 @@ func _ready():
 
 
 func _on_Area2D_area_entered(area):
+	Sfx.playSFX(1)
 	if Items.heldItem:
 		showItem()
 	else:

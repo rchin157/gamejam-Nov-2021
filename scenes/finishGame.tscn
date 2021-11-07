@@ -4,18 +4,6 @@
 [ext_resource path="res://sprites/Tileset/jam3endcg.png" type="Texture" id=2]
 [ext_resource path="res://font/FUTENE.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 256, 144 )
-
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 2 )
-region = Rect2( 256, 0, 256, 144 )
-
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 2 )
-region = Rect2( 512, 0, 256, 144 )
-
 [sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 256, 144 )
@@ -32,17 +20,29 @@ region = Rect2( 768, 0, 256, 144 )
 atlas = ExtResource( 2 )
 region = Rect2( 1024, 0, 256, 144 )
 
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 256, 144 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 256, 0, 256, 144 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 512, 0, 256, 144 )
+
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
-"loop": false,
-"name": "Win",
-"speed": 0.06
-}, {
 "frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
 "loop": false,
 "name": "Lose",
-"speed": 0.06
+"speed": 0.12
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": false,
+"name": "Win",
+"speed": 0.12
 } ]
 
 [sub_resource type="DynamicFont" id=15]
@@ -80,8 +80,8 @@ margin_left = 45.3845
 margin_top = 29.3665
 margin_right = 1571.38
 margin_bottom = 871.367
-custom_fonts/normal_font = SubResource( 15 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 15 )
 text = "You've done it, Fenk! Your first foray into practical alchemy has been greatly successful!
 
 You have successfully transmuted a panacea capable of curing your oh-so-ugly triangular-headedness. Now you can live happilly alongside those others with rotund skulls.
@@ -97,8 +97,8 @@ margin_left = 45.3845
 margin_top = 29.3665
 margin_right = 1571.38
 margin_bottom = 871.367
-custom_fonts/normal_font = SubResource( 15 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = SubResource( 15 )
 text = "Alas, Fenk. Your alchemic experiment was an incredible failure.
 
 You have proven yourself to be incapable of transmuting that which you yearned for. The de-triangulating panacea you attempted to produce instead became an explosive mess. In your quest to lose an embarrassing head shape, you instead lost your life.
@@ -114,8 +114,8 @@ margin_left = 708.508
 margin_top = 794.652
 margin_right = 884.508
 margin_bottom = 879.652
-custom_fonts/font = SubResource( 16 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 16 )
 text = "Continue"
 flat = true
 __meta__ = {

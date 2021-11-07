@@ -10,6 +10,10 @@ var inventory
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#RYLAN LOOK HERE FOR SONGS
+	Sfx.stopSongs()
+	Sfx.enableSong(1)
+	
 	Items.changeHeld(Items.heldItem)
 	inventory = get_node("InventoryView")
 	tables = [
@@ -27,7 +31,7 @@ func _ready():
 
 	for i in range(tables.size()):
 		tables[i].setDaddy(self)
-		tables[i].tableStart = tables[i].tableContents*i
+		tables[i].setStart(tables[i].tableContents*i)
 	
 	if Items.previousRoom == 4:
 		$Player.position = Vector2(148, 717)

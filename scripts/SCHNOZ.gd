@@ -18,6 +18,7 @@ func _ready():
 
 
 func _on_Area2D_area_entered(area):
+	Sfx.playSFX(0)
 	print(Items.heldItem)
 	if Items.heldItem:
 		print(Items.heldItem.smell)

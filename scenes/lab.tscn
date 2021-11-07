@@ -72,25 +72,25 @@ position = Vector2( 1629.84, 467.194 )
 shape = SubResource( 4 )
 
 [node name="PotionTable" parent="." instance=ExtResource( 4 )]
-position = Vector2( 804.262, 335.467 )
+position = Vector2( 1143.67, 307.183 )
 
 [node name="PotionTable2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 654.431, 602.166 )
+position = Vector2( 804.338, 319.323 )
 
 [node name="PotionTable4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1213.3, 342.959 )
+position = Vector2( 1439.57, 303.361 )
 
 [node name="PotionTable5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1259.75, 808.932 )
+position = Vector2( 1145.2, 671.753 )
 
 [node name="PotionTable6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1505.47, 672.586 )
+position = Vector2( 1451.73, 671.172 )
 
 [node name="PotionTable3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 855.204, 816.424 )
+position = Vector2( 804.292, 677.831 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1397.8, 477.837 )
+position = Vector2( 134.907, 610.773 )
 
 [node name="InventoryView" parent="." instance=ExtResource( 5 )]
 visible = false

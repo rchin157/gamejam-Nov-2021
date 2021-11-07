@@ -8,15 +8,24 @@ const tableContents = 16
 var tableStart = 0
 var daddy
 var player 
+var itemDisplay
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	itemDisplay = get_node("DisplayItem")
+	itemDisplay.nameTag.hide()
+	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+func setStart(start):
+	tableStart = start
+	itemDisplay.setAppearance(Items.r1Items[tableStart])
+
 func setDaddy(dad):
 	daddy = dad
 

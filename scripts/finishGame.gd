@@ -4,6 +4,8 @@ var onText = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Sfx.stopSongs()
+	Sfx.enableSong(4)
 	if Items.win:
 		$CanvasLayer/AnimatedSprite.set_animation("Win")
 	else:
@@ -35,7 +37,14 @@ func _on_Button_pressed():
 func _on_AnimatedSprite_frame_changed():
 	if Items.win:
 		if $CanvasLayer/AnimatedSprite.frame == 2:
+			Sfx.stopSongs()
+			Sfx.enableSong(2)
+			$CanvasLayer/AnimatedSprite.stop()
 			$CanvasLayer/Button.show()
 	else:
+		if $CanvasLayer/AnimatedSprite.frame == 2:
+			Sfx.stopSongs()
+			Sfx.enableSong(3)
 		if $CanvasLayer/AnimatedSprite.frame == 3:
+			$CanvasLayer/AnimatedSprite.stop()
 			$CanvasLayer/Button.show()

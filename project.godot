@@ -27,6 +27,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Items="*res://scripts/GlobalItemScript.gd"
+Sfx="*res://scenes/sfx.tscn"
 
 [display]
 

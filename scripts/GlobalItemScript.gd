@@ -30,7 +30,7 @@ var collectedSubstances = []
 var potColour = Color(1, 1, 1)
 var fulminate
 
-var win = false
+var win = true
 
 # room change stuff
 # 0 = lab, 1 = supply, 2 = apparatus

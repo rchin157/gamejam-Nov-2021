@@ -39,9 +39,6 @@ src = 1
 position = Vector2( 237.27, 314.849 )
 scale = Vector2( 2.93464, 2.73622 )
 
-[node name="Player" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1448.46, 711.699 )
-
 [node name="SCHNOZ" parent="." instance=ExtResource( 5 )]
 position = Vector2( 674.599, 262.464 )
 scale = Vector2( 4.39803, 3.87716 )
@@ -49,6 +46,9 @@ scale = Vector2( 4.39803, 3.87716 )
 [node name="TestMachine" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1249.24, 281.513 )
 scale = Vector2( 2.61221, 2.53779 )
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1448.46, 711.699 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 2
