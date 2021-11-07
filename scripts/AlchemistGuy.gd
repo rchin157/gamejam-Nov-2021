@@ -31,7 +31,7 @@ func interact():
 				# simply ask by item name
 				var dopt = rng.randi_range(0, 1)
 				if dopt == 0:
-					currentHint = "Go get a dash of %s" % details[4]
+					currentHint = "Go get a dash of %s." % details[4]
 				else:
 					currentHint = "Procure %s. And make quick." % details[4]
 				say(currentHint)
@@ -59,13 +59,13 @@ func interact():
 
 func _on_AlchGuy_area_entered(area):
 	#print("alchguy enter")
-	area.setInteractable(self)
+	area.get_parent().setInteractable(self)
 	player = area
 
 
 func _on_AlchGuy_area_exited(area):
 	#print("alchguy exit")
-	area.setInteractable(null)
+	area.get_parent().setInteractable(null)
 	player = null
 
 func checkLastStepCompleted():

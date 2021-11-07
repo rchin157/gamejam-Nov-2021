@@ -30,12 +30,12 @@ func _ready():
 
 
 func _on_Book_area_entered(area):
-	area.setInteractable(self)
+	area.get_parent().setInteractable(self)
 	player = area
 
 
 func _on_Book_area_exited(area):
-	area.setInteractable(null)
+	area.get_parent().setInteractable(null)
 	player = null
 
 func interact():
