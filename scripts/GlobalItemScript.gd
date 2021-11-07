@@ -34,15 +34,16 @@ enum shapes {ERLENMEYER,FLORENCE,JAG,BOX}
 enum shades {DARK,BRIGHT}
 #Compoenents for name generation
 
-var prefix2 = ["Very","Partially","Significantly","Neglibly","Mostly","Slightly","Mildly","Lukewarm","Boiling","Epic","Un-Epic","","Unremarkable","2%"]
+var prefix2 = ["Very","Partially","Significantly","Neglibly","Mostly","Slightly","Mildly","Lukewarm","Boiling","Epic","Un-Epic","","Unremarkable","2%","Old","Big"]
 
-var prefix = ["Irradiated","Highly Innervated","Hydrogenated","Phosphorylated","Refined",
-"Saturated","Filtered","Strained","Based","Fundamental","Nucleated","Freudian","Oedipal","Delicious",
-"Supercooled","Distilled","Ultraviolet","Beta","Concentrated","Seeded","Feeded","Bugged","Logarithmic",
-"Isotropic","Gram Blasted","Diluted"]
+var prefix = ["Irradiated","Highly Innervated","Hydrogenated","Phosphorylated","Refined","Fragile","Suspiscious","Peculiar","Aerobic",
+"Saturated","Filtered","Strained","Based","Fundamental","Nucleated","Freudian","Oedipal","Delicious","Broken","Whimsical","Acidic",
+"Supercooled","Distilled","Ultraviolet","Beta","Concentrated","Seeded","Feeded","Bugged","Logarithmic","Alpha","Kino","Redeemed",
+"Isotropic","Gram Blasted","Diluted","Infinite","Homogenized","Recrystallized","Fermented","Elastic","Superheated","Chiral","Achiral"]
 
-var suffix = ["Ether","Ichor","Tofu","Benzoate","Aspic","Soylent","Talc","Mercury","Cinnabar","Quicksilver","Argentum",
-"Ilnam","Sneedium","Chuckide","Susium","Glyceride","Alcohol","Sulfate","Yornce","Lewis","Oongul","Cope","Plasma","Sap","Love","Pheromone"]
+var suffix = ["Ether","Ichor","Tofu","Benzoate","Aspic","Soylent","Talc","Mercury","Cinnabar","Quicksilver","Argentum","Banium","Wire","Kino",
+"Ilnam","Sneedium","Chuckide","Susium","Glyceride","Alcohol","Sulfate","Yornce","Lewis","Oongul","Cope","Plasma","Sap","Love","Pheromone",
+"青い","緑","Milk","Jaffa Cake"]
 
 #Lists for all valid names and names in use dict
 

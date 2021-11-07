@@ -7,31 +7,31 @@
 script = ExtResource( 2 )
 
 [node name="Item" parent="." instance=ExtResource( 1 )]
-position = Vector2( 469.995, 211.18 )
+position = Vector2( 801.762, 311.186 )
 
 [node name="Item2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 619.666, 211.18 )
+position = Vector2( 991.118, 308.011 )
 
 [node name="Item3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 772.901, 214.743 )
+position = Vector2( 1185.62, 308.4 )
 
 [node name="Item4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 318.542, 214.743 )
+position = Vector2( 577.289, 316.337 )
 
 [node name="Item5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 170.653, 211.18 )
+position = Vector2( 359.554, 309.599 )
 
 [node name="Item6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 472.515, 431.723 )
+position = Vector2( 799.519, 626.973 )
 
 [node name="Item7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 622.186, 431.723 )
+position = Vector2( 999.987, 633.323 )
 
 [node name="Item8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 775.42, 435.286 )
+position = Vector2( 1205.61, 635.299 )
 
 [node name="Item9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 321.062, 435.286 )
+position = Vector2( 570.284, 622.6 )
 
 [node name="Item10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 173.173, 431.723 )
+position = Vector2( 362.074, 620.624 )
