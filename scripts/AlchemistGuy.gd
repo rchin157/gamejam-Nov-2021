@@ -25,7 +25,7 @@ func interact():
 		else:
 			# give new hint
 			Items.ingredientAdded = false
-			var nextItem = Items.getRequirement(Items.currentStep)
+			var nextItem = Items.getRequirement(Items.currentStep+1)
 			var details = Items.getInfoStrings(nextItem)
 			var option = rng.randi_range(0, 3)
 			if option == 0:

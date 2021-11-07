@@ -59,7 +59,7 @@ func checkNextNode():
 
 func checkReleased():
 	if Input.is_action_just_released("mouse"):
-		print("released")
+		#print("released")
 		drawing = false
 		if not closedShape():
 			purgeDrawing()
@@ -68,7 +68,7 @@ func checkReleased():
 
 func checkMouseStart():
 	if Input.is_action_just_pressed("mouse"):
-		print("pressed")
+	#	print("pressed")
 		purgeDrawing()
 		spawnNode()
 		firstNodePos = get_viewport().get_mouse_position()-get_position()
@@ -81,7 +81,7 @@ func closeSelf():
 	set_visible(false)
 
 func _on_ColorRect_mouse_entered():
-	print("entered drawgame")
+#	print("entered drawgame")
 	mouseDraw = true
 	pass # Replace with function body.
 
@@ -93,7 +93,7 @@ func checkShapeQuality():
 	for i in range(mouseNodes.size()):
 		if not mouseNodes[i].checkActive(inner,outer):
 			failures+=1
-	print("you have "+String(failures)+" failures")
+#	print("you have "+String(failures)+" failures")
 	if failures <= cutoff and mouseNodes.size()>=10:
 		drawDaddy.drawingPassed()
 	else:
@@ -118,7 +118,7 @@ func spawnNode():
 	line.add_point(node.get_position())
 
 func _on_ColorRect_mouse_exited():
-	print("exit drawgame")
+#	print("exit drawgame")
 	mouseDraw = false
 	drawing = false
 	purgeDrawing()

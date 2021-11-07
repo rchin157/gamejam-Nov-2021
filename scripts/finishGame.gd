@@ -23,7 +23,7 @@ func _ready():
 
 func generateRecipe():
 	var winText = "The Winning Recipe Was:\n"
-	for i in range(Items.lastStep):
+	for i in range(Items.lastStep+1):
 		winText = winText+Items.usedNames[Items.allVItems[i].ID]+",\n\n"
 	winText = winText+"and finally...\n A Dash of Fulminate"
 	print(Items.lastStep)

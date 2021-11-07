@@ -91,11 +91,12 @@ func gameStart():
 	compileAllItems()
 	
 	rng.randomize()
-	lastStep = rng.randi_range(1, 6)
+	lastStep = rng.randi_range(3, 6)
 	allVItems.shuffle()
 	
 	#get_tree().change_scene("res://scenes/lab.tscn")
 	
+
 	changeHeld(null)
 	collectedSubstances = []
 	ingredientAdded = false
@@ -129,7 +130,7 @@ func compileAllItems():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	gameStart()
-	debugItems()
+	#debugItems()
 
 func changeHeld(item):
 	heldItem = item
@@ -145,13 +146,13 @@ func populateList(list,count):
 		#creates a name in the dictionary for the item, add another one later for book if needed
 		usedNames[list[i].ID] = itemNames.pop_back()
 		bookNames[list[i].ID] = itemNames.pop_back()
-	if itemList.empty():
-		print("not enough Item templates, list is empty")
+#	if itemList.empty():
+	#	print("not enough Item templates, list is empty")
 
 func regenerateItemNames():
 	itemNames.clear()
 	var mNames = prefix.size()*suffix.size()*prefix2.size();
-	print(mNames)
+	#print(mNames)
 	var p2Size = prefix2.size()
 	var pSize = prefix.size()
 	var sSize = suffix.size()
