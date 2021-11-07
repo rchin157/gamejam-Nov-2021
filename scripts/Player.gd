@@ -22,7 +22,7 @@ func _process(delta):
 			interactable.interact()
 			print("interacted")
 	else:
-		if Input.is_action_just_pressed("ui_select"):
+		if Input.is_action_just_pressed("ui_select") and interactable != null:
 			# signal the interaction to progress or close
 			interactable.progressInteraction()
 
@@ -38,10 +38,10 @@ func _signalCaught():
 
 func updateItemDisplay(item):
 	if item != null:
-		$Item.setAppearance(item)
-		$Item.show()
+		$CanvasLayer/Item.setAppearance(item)
+		$CanvasLayer/Item.show()
 	else:
-		$Item.hide()
+		$CanvasLayer/Item.hide()
 
 func setHeldItem(item):
 	updateItemDisplay(item)
@@ -84,5 +84,8 @@ func getInput():
 		$AnimatedSprite.animation = "walk"
 		$AnimatedSprite.flip_v = false
 		$AnimatedSprite.flip_h = velocity.x < 0
+
+func setInteracting(inter):
+	interacting = inter
 
 

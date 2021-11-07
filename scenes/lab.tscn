@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://entities/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://entities/AlchemistGuy.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://entities/theBook.tscn" type="PackedScene" id=6]
 [ext_resource path="res://sprites/Tileset/LevelSet.tres" type="TileSet" id=7]
 [ext_resource path="res://scripts/lab.gd" type="Script" id=8]
+[ext_resource path="res://font/FUTENE.ttf" type="DynamicFontData" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1597.32, 46.9026 )
@@ -20,6 +21,14 @@ extents = Vector2( 878.283, 31.9384 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 33.3292, 814.35 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 9 )
 
 [node name="Node2D2" type="Node2D"]
 script = ExtResource( 8 )
@@ -89,3 +98,38 @@ margin_left = 803.762
 margin_top = 562.742
 margin_right = 803.762
 margin_bottom = 562.742
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+margin_left = 175.0
+margin_top = 70.0
+margin_right = 875.0
+margin_bottom = 270.0
+color = Color( 0.168627, 0.168627, 0.168627, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="reorgPrompt" type="RichTextLabel" parent="CanvasLayer/ColorRect"]
+margin_left = 12.0
+margin_top = 11.0
+margin_right = 689.0
+margin_bottom = 148.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "Whenever you leave, I've taken the liberty of reorganizing the supplies. No need to thank me."
+
+[node name="closePrompt" type="Button" parent="CanvasLayer/ColorRect"]
+margin_left = 591.536
+margin_top = 155.879
+margin_right = 694.536
+margin_bottom = 193.879
+custom_fonts/font = SubResource( 6 )
+text = "Close"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/closePrompt" to="." method="_on_closePrompt_pressed"]

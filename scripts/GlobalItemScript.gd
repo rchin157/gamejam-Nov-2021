@@ -31,6 +31,10 @@ var rng = RandomNumberGenerator.new()
 var previousRoom = 0
 var currentRoom = 0
 
+# player stuff
+var playerHasLeft = false
+var reorganizeExplained = false
+
 #enumerators for item properties
 enum resonances {NON,ANGLE,SINE,ERROR}
 enum smells {NEUTRAL,GOOD,BAD,CONFUSE}
