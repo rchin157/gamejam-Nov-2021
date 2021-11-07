@@ -33,6 +33,8 @@ enum shapes {ERLENMEYER,FLORENCE,JAG,BOX}
 enum shades {DARK,BRIGHT}
 #Compoenents for name generation
 
+var prefix2 = ["Very","Partially","Significantly","Neglibly","Mostly","Slightly","Mildly","Lukewarm","Boiling","Epic","Un-Epic",""]
+
 var prefix = ["Irradiated","Highly Innervated","Hydrogenated","Phosphorylated","Refined",
 "Saturated","Filtered","Strained","Based","Fundamental","Nucleated","Freudian","Oedipal","Delicious",
 "Supercooled","Distilled","Ultraviolet","Beta","Concentrated","Seeded","Feeded","Bugged","Logarithmic",
@@ -46,6 +48,7 @@ var suffix = ["Ether","Ichor","Tofu","Benzoate","Aspic","Soylent","Talc","Mercur
 var itemNames = [];
 
 var usedNames = {}
+var bookNames = {}
 
 func gameStart():
 	if !sameSeed:
@@ -93,18 +96,22 @@ func populateList(list,count):
 		list[i].defineProperties(itemList.pop_back())
 		#creates a name in the dictionary for the item, add another one later for book if needed
 		usedNames[list[i].ID] = itemNames.pop_back()
+		bookNames[list[i].ID] = itemNames.pop_back()
 	if itemList.empty():
 		print("not enough Item templates, list is empty")
 
 func regenerateItemNames():
 	itemNames.clear()
-	var mNames = prefix.size()*suffix.size();
+	var mNames = prefix.size()*suffix.size()*prefix2.size();
+	print(mNames)
+	var p2Size = prefix2.size()
 	var pSize = prefix.size()
 	var sSize = suffix.size()
 	itemNames.resize(mNames)
 	for i in range(pSize):
 		for j in range(sSize):
-			itemNames[i+j*pSize] = prefix[i]+" "+suffix[j]
+			for k in range(p2Size):
+				itemNames[i+j*pSize+k*pSize*sSize] = prefix2[k]+" "+prefix[i]+" "+suffix[j]
 	
 	itemNames.shuffle()
 		
