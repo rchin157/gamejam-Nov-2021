@@ -96,8 +96,8 @@ margin_left = 20.0
 margin_top = 26.0
 margin_right = 1417.0
 margin_bottom = 380.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Talk to the alchemist to find out which substance you need next.
 The substance supplier will have any  substances not present in the drawers."
 __meta__ = {
@@ -109,8 +109,8 @@ margin_left = 20.6336
 margin_top = 258.923
 margin_right = 1006.63
 margin_bottom = 612.923
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Movements - Arrow Keys
 Interact/Advance - Space
 Other Interactions - Mouse"
@@ -123,8 +123,8 @@ margin_left = 1351.03
 margin_top = 799.108
 margin_right = 1579.03
 margin_bottom = 875.108
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Close"
 flat = true
 __meta__ = {
@@ -144,8 +144,8 @@ margin_left = 20.6336
 margin_top = 258.923
 margin_right = 1006.63
 margin_bottom = 612.923
-custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "You, Fenk, are apprenticed to the renowned master alchemist Thalmun Doffys. After months of theory and education, it is now time to put your learning to the test-- your very first alchemical transmutation is here! Your task is simple: synthesize a panacea capable of curing your embarassingly triangular head.
 
 Unfortunately, your master has recently lost his eyesight. Regardless, his ongoing instruction will prove tantamount to your eventual alchemic success. Heed his words wisely, lest you make a grave error. Even a dash of fulminate is enough to cause a hellishly destructive explosion."
@@ -158,8 +158,8 @@ margin_left = 1351.03
 margin_top = 799.108
 margin_right = 1579.03
 margin_bottom = 875.108
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Close"
 flat = true
 __meta__ = {
