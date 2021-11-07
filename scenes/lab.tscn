@@ -21,9 +21,9 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 
 position = Vector2( 157.092, 211.471 )
 
 [node name="door" parent="." instance=ExtResource( 3 )]
-position = Vector2( 124, 841 )
-rotation = -1.5708
+position = Vector2( 122.74, 846.04 )
 scale = Vector2( -2, 2 )
+dest = 4
 
 [node name="SCHNOZ" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1094.96, 297.911 )

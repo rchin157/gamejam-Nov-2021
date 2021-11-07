@@ -28,7 +28,7 @@ animations = [ {
 [node name="Player" type="Area2D"]
 scale = Vector2( 1.5, 1.5 )
 script = ExtResource( 1 )
-speed = 150
+speed = 250
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
