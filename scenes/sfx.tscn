@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scripts/sfx.gd" type="Script" id=1]
+[ext_resource path="res://Sounds/Return-Home.wav" type="AudioStream" id=2]
+[ext_resource path="res://Sounds/Sniff.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Ingredient Collecting (1).wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/Fulmination.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/Resonator.wav" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/Alchemy Theme.wav" type="AudioStream" id=7]
+[ext_resource path="res://Sounds/FinalPrep.wav" type="AudioStream" id=8]
+
+[node name="SFX" type="Node"]
+script = ExtResource( 1 )
+
+[node name="OpeningMenu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -20.0
+
+[node name="MainTheme" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -15.0
+
+[node name="WinScreen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -10.0
+
+[node name="LoseScreen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -5.0
+
+[node name="PreVictorySong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -5.0
+
+[node name="BRAPP" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Resonator" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.0

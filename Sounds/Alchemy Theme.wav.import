@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Alchemy Theme.wav-146f45d02799ca218008f483b0abaf53.sample"
+
+[deps]
+
+source_file="res://Sounds/Alchemy Theme.wav"
+dest_files=[ "res://.import/Alchemy Theme.wav-146f45d02799ca218008f483b0abaf53.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
