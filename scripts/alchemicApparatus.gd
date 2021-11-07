@@ -7,7 +7,7 @@ var player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Particles2D.process_material.color = Items.potColour
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,7 +24,9 @@ func verifyContents():
 func interact():
 	if Items.heldItem != null:
 		Items.addSubstance(Items.heldItem)
+		$Particles2D.process_material.color = Items.potColour
 		Items.changeHeld(null)
+		player.finishInteraction()
 	else:
 		say("You don't have anything to add.")
 

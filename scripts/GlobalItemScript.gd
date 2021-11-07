@@ -27,6 +27,7 @@ var lastStep
 var rng = RandomNumberGenerator.new()
 var ingredientAdded = false
 var collectedSubstances = []
+var potColour = Color(1, 1, 1)
 
 # room change stuff
 # 0 = lab, 1 = supply, 2 = apparatus
@@ -293,6 +294,15 @@ func getInfoStrings(item):
 func addSubstance(item):
 	collectedSubstances.append(item)
 	ingredientAdded = true
+	match item.color:
+		colors.BLUE:
+			potColour = Color(0,0,1)
+		colors.GREEN:
+			potColour = Color(0,1,0)
+		colors.RED:
+			potColour = Color(1,0,0)
+		colors.YELLOW:
+			potColour = Color(1,1,0)
 
 
 
