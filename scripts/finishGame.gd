@@ -30,3 +30,12 @@ func _on_Button_pressed():
 			$CanvasLayer/ColorRect/losetext.show()
 	else:
 		get_tree().change_scene("res://scenes/menu.tscn")
+
+
+func _on_AnimatedSprite_frame_changed():
+	if Items.win:
+		if $CanvasLayer/AnimatedSprite.frame == 2:
+			$CanvasLayer/Button.show()
+	else:
+		if $CanvasLayer/AnimatedSprite.frame == 3:
+			$CanvasLayer/Button.show()

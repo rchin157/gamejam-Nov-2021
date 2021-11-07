@@ -16,7 +16,7 @@ size = 64
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 64
+size = 48
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=5]
@@ -74,7 +74,6 @@ __meta__ = {
 }
 
 [node name="InstructionsPanel" type="ColorRect" parent="CanvasLayer"]
-visible = false
 margin_right = 1611.0
 margin_bottom = 913.0
 __meta__ = {
@@ -82,15 +81,31 @@ __meta__ = {
 }
 
 [node name="Text" type="RichTextLabel" parent="CanvasLayer/InstructionsPanel"]
-margin_left = 339.66
-margin_top = 277.611
-margin_right = 1325.66
-margin_bottom = 631.611
+margin_left = 347.669
+margin_top = 401.335
+margin_right = 1333.67
+margin_bottom = 755.335
 custom_fonts/normal_font = SubResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Movements - Arrow Keys
 Interact/Advance - Space
 Other Interactions - Mouse"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Text2" type="RichTextLabel" parent="CanvasLayer/InstructionsPanel"]
+margin_left = 339.66
+margin_top = 100.0
+margin_right = 1325.66
+margin_bottom = 454.0
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Talk to the alchemist to find out the which substance you need.
+The substance supplier may have substances not present in the drawers."
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="close" type="Button" parent="CanvasLayer/InstructionsPanel"]
 margin_left = 627.543
