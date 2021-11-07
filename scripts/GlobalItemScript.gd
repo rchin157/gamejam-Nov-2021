@@ -30,6 +30,8 @@ var collectedSubstances = []
 var potColour = Color(1, 1, 1)
 var fulminate
 
+var win = false
+
 # room change stuff
 # 0 = lab, 1 = supply, 2 = apparatus
 var previousRoom = 0
@@ -92,7 +94,7 @@ func gameStart():
 	lastStep = rng.randi_range(1, 6)
 	allVItems.shuffle()
 	
-	get_tree().change_scene("res://scenes/lab.tscn")
+	#get_tree().change_scene("res://scenes/lab.tscn")
 	
 	changeHeld(null)
 	collectedSubstances = []
@@ -115,7 +117,7 @@ func debugItems():
 	print(usedNames[r1Items[0].ID])
 	print(usedNames[r2Items[0].ID])
 	print(usedNames[bItems[0].ID])
-	heldItem = r2Items[0]
+	#heldItem = r2Items[0]
 
 func compileAllItems():
 	allVItems.clear()
@@ -318,14 +320,13 @@ func addSubstance(item):
 func checkWin():
 	for i in range(collectedSubstances.size()):
 		if collectedSubstances[i].ID != allVItems[i].ID:
-			return false
-	return true
+			win = false
+			get_tree().change_scene("res://scenes/finishGame.tscn")
+			return
+	win = true
+	get_tree().change_scene("res://scenes/finishGame.tscn")
+	return
 
-func win():
-	get_tree().change_scene()
-
-func lose():
-	pass
 
 
 
