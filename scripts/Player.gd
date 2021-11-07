@@ -5,7 +5,7 @@ export var xPad = 50
 export var yPad = 50
 var screen_size
 
-var heldItem = null
+
 
 var interactable = null
 var interacting = false
@@ -56,19 +56,19 @@ func _process(delta):
 			pass
 	
 func setHeldItem(item):
-	heldItem = item
+	Items.heldItem = item
 
 func getHeltItem():
-	return heldItem
+	return Items.heldItem
 
 func dropItem():
-	heldItem = null
+	Items.heldItem = null
 
 func setInteractable(inter):
-	interactable = inter
+	Items.interactable = inter
 
 func finishInteraction():
-	interacting = false
+	Items.interacting = false
 
 
 

@@ -6,8 +6,8 @@ extends Node
 # var b = "text"
 #Defines the maximum items that can exist based on boolean properties
 #Boolean order: Color>Shade>Shape>Smell
-const maxItems = 64;
-const itemBits = 6;
+const maxItems = 512;
+const itemBits = 9;
 const sameSeed = false;
 
 var itemList = [];
@@ -27,21 +27,22 @@ var lastStep
 var rng = RandomNumberGenerator.new()
 
 #enumerators for item properties
+enum resonances {NON,ANGLE,SINE,ERROR}
 enum smells {NEUTRAL,GOOD,BAD,CONFUSE}
 enum colors {RED,BLUE,YELLOW,GREEN}
 enum shapes {ERLENMEYER,FLORENCE,JAG,BOX}
 enum shades {DARK,BRIGHT}
 #Compoenents for name generation
 
-var prefix2 = ["Very","Partially","Significantly","Neglibly","Mostly","Slightly","Mildly","Lukewarm","Boiling","Epic","Un-Epic",""]
+var prefix2 = ["Very","Partially","Significantly","Neglibly","Mostly","Slightly","Mildly","Lukewarm","Boiling","Epic","Un-Epic","","Unremarkable","2%"]
 
 var prefix = ["Irradiated","Highly Innervated","Hydrogenated","Phosphorylated","Refined",
 "Saturated","Filtered","Strained","Based","Fundamental","Nucleated","Freudian","Oedipal","Delicious",
 "Supercooled","Distilled","Ultraviolet","Beta","Concentrated","Seeded","Feeded","Bugged","Logarithmic",
-"Isotropic","Gram Blasted"]
+"Isotropic","Gram Blasted","Diluted"]
 
 var suffix = ["Ether","Ichor","Tofu","Benzoate","Aspic","Soylent","Talc","Mercury","Cinnabar","Quicksilver","Argentum",
-"Ilnam","Sneedium","Chuckide","Susium","Glyceride","Alcohol","Sulfate","Yornce","Lewis","Oongul","Cope","Plasma","Sap"]
+"Ilnam","Sneedium","Chuckide","Susium","Glyceride","Alcohol","Sulfate","Yornce","Lewis","Oongul","Cope","Plasma","Sap","Love","Pheromone"]
 
 #Lists for all valid names and names in use dict
 
@@ -49,6 +50,10 @@ var itemNames = [];
 
 var usedNames = {}
 var bookNames = {}
+
+
+#player item value
+var heldItem = null
 
 func gameStart():
 	if !sameSeed:
@@ -74,6 +79,7 @@ func debugItems():
 	print(usedNames[r1Items[0].ID])
 	print(usedNames[r2Items[0].ID])
 	print(usedNames[bItems[0].ID])
+	heldItem = r2Items[0]
 
 func compileAllItems():
 	allVItems.clear()
@@ -133,6 +139,7 @@ func regenerateItemList():
 
 #Class for storing item properties
 class itemObject:
+	var resonance
 	var smell
 	var color
 	var tint
@@ -143,17 +150,21 @@ class itemObject:
 	func defineProperties(value):
 		ID = value
 		var binaries = getBinary(value)
-		match binaries[0]:
+		match binaries[0]+binaries[1]*2:
 			0:
 				smell = smells.NEUTRAL
 			1:
 				smell = smells.GOOD
-		match binaries[1]:
+			2:
+				smell = smells.BAD
+			3:
+				smell = smells.CONFUSE
+		match binaries[2]:
 			0:
 				tint = shades.DARK
 			1:
 				tint = shades.BRIGHT
-		match binaries[2]+binaries[3]*2:
+		match binaries[3]+binaries[4]*2:
 			0:
 				color = colors.RED
 			1:
@@ -163,7 +174,7 @@ class itemObject:
 			3: 
 				color = colors.BLUE
 				#enum shapes {ERLENMEYER,FLORENCE,JAG,BOX}
-		match binaries[4]+binaries[5]*2:
+		match binaries[5]+binaries[6]*2:
 			0:
 				shape = shapes.ERLENMEYER
 			1:
@@ -172,6 +183,16 @@ class itemObject:
 				shape = shapes.JAG
 			3: 
 				shape = shapes.BOX	
+				#enum resonance {NON,ANGLE,SINE,ERROR}
+		match binaries[7]+2*binaries[8]:
+			0:
+				resonance = resonances.NON
+			1:
+				resonance = resonances.ANGLE
+			2:
+				resonance = resonances.SINE
+			3:
+				resonance = resonances.ERROR
 		pass
 	
 	func getBinary(number):

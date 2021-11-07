@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://scripts/MouseNode.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="MouseNode" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="MouseDrawNode" type="Control" parent="."]
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Body" type="Area2D" parent="MouseDrawNode"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseDrawNode/Body"]
+shape = SubResource( 1 )
+
+[node name="Radius" type="Area2D" parent="MouseDrawNode"]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseDrawNode/Radius"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 1 )
