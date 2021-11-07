@@ -247,6 +247,15 @@ func getInfoStrings(item):
 		shapes.JAG:
 			results.append("jagged")
 	results.append(usedNames[item.ID])
+	match item.resonance:
+		resonances.ANGLE:
+			results.append("angle")
+		resonances.ERROR:
+			results.append("error")
+		resonances.NON:
+			results.append("non")
+		resonances.SINE:
+			results.append("sine")
 	return results
 
 

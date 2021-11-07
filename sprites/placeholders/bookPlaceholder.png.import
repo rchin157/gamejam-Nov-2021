@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jam3alchemicalresonator.png-95c35adb15af74dfd0134c1e134fdaf8.stex"
+path="res://.import/bookPlaceholder.png-1918636ea446dd0f95ccfac9af0c4ed0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/Entities/jam3alchemicalresonator.png"
-dest_files=[ "res://.import/jam3alchemicalresonator.png-95c35adb15af74dfd0134c1e134fdaf8.stex" ]
+source_file="res://sprites/placeholders/bookPlaceholder.png"
+dest_files=[ "res://.import/bookPlaceholder.png-1918636ea446dd0f95ccfac9af0c4ed0.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

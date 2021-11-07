@@ -9,14 +9,14 @@ var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	rng.randomize()
-	$Dialogue.hide()
+	$CanvasLayer/Dialogue.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 func interact():
-	$Dialogue.show()
+	$CanvasLayer/Dialogue.show()
 	if checkLastStepCompleted() or Items.currentStep == -1:
 		if Items.currentStep == Items.lastStep:
 			#show end of game dialogue
@@ -73,9 +73,9 @@ func checkLastStepCompleted():
 	pass
 
 func say(lines):
-	$Dialogue/Text.set_text(lines)
-	$Dialogue.show()
+	$CanvasLayer/Dialogue/Text.set_text(lines)
+	$CanvasLayer/Dialogue.show()
 	
 func progressInteraction():
-	$Dialogue.hide()
+	$CanvasLayer/Dialogue.hide()
 	player.finishInteraction()

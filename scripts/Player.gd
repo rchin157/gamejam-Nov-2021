@@ -65,10 +65,10 @@ func dropItem():
 	Items.heldItem = null
 
 func setInteractable(inter):
-	Items.interactable = inter
+	interactable = inter
 
 func finishInteraction():
-	Items.interacting = false
+	interacting = false
 
 
 
