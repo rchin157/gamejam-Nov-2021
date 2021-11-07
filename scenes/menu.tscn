@@ -81,7 +81,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-<<<<<<< Updated upstream
 [node name="Text" type="RichTextLabel" parent="CanvasLayer/InstructionsPanel"]
 margin_left = 339.66
 margin_top = 277.611
@@ -92,34 +91,6 @@ custom_fonts/normal_font = SubResource( 4 )
 text = "Movements - Arrow Keys
 Interact/Advance - Space
 Other Interactions - Mouse"
-=======
-[node name="Text1" type="RichTextLabel" parent="CanvasLayer/InstructionsPanel"]
-margin_left = 339.66
-margin_top = 100.0
-margin_right = 1325.66
-margin_bottom = 454.0
-custom_fonts/normal_font = SubResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-text = "Talk to the alchemist to find out the which substance you need.
-The substance supplier may have substances not present in the drawers."
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Text2" type="RichTextLabel" parent="CanvasLayer/InstructionsPanel"]
-margin_left = 347.669
-margin_top = 401.335
-margin_right = 1333.67
-margin_bottom = 755.335
-custom_fonts/normal_font = SubResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-text = "Movements - Arrow Keys
-Interact/Advance - Space
-Other Interactions - Mouse"
-__meta__ = {
-"_edit_use_anchors_": false
-}
->>>>>>> Stashed changes
 
 [node name="close" type="Button" parent="CanvasLayer/InstructionsPanel"]
 margin_left = 627.543
