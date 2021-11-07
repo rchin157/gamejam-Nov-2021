@@ -3,6 +3,7 @@ extends Area2D
 var requiredSubstances = []
 var currentSubstances = []
 
+var player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,12 +20,28 @@ func verifyContents():
 		if not currentSubstances.has(req):
 			return false
 	return true
-		
-func addRequirement(req):
-	requiredSubstances.append(req)
-	
-func addCurrent(curr):
-	currentSubstances.append(curr)
 
 func interact():
-	pass
+	if Items.heldItem != null:
+		Items.addSubstance(Items.heldItem)
+		Items.changeHeld(null)
+	else:
+		say("You don't have anything to add.")
+
+
+func _on_Apparatus_area_entered(area):
+	area.get_parent().setInteractable(self)
+	player = area.get_parent()
+
+
+func _on_Apparatus_area_exited(area):
+	area.get_parent().setInteractable(null)
+	player = null
+
+func say(lines):
+	$CanvasLayer/ColorRect/Text.set_text(lines)
+	$CanvasLayer/ColorRect.show()
+	
+func progressInteraction():
+	$CanvasLayer/ColorRect.hide()
+	player.finishInteraction()

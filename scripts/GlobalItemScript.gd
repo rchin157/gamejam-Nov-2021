@@ -25,6 +25,8 @@ var allVItems = [];
 var currentStep = -1
 var lastStep
 var rng = RandomNumberGenerator.new()
+var ingredientAdded = false
+var collectedSubstances = []
 
 # room change stuff
 # 0 = lab, 1 = supply, 2 = apparatus
@@ -84,8 +86,17 @@ func gameStart():
 	populateList(bItems,10)
 	compileAllItems()
 	
-	lastStep = rng.randi_range(1, 20)
+	lastStep = rng.randi_range(1, 6)
 	allVItems.shuffle()
+	
+	changeHeld(null)
+	collectedSubstances = []
+	ingredientAdded = false
+	currentStep = -1
+	previousRoom = 0
+	currentRoom = 0
+	playerHasLeft = false
+	reorganizeExplained = false
 	
 
 #This method is for debugging purposes
@@ -279,7 +290,9 @@ func getInfoStrings(item):
 			results.append("sinusoidal")
 	return results
 
-
+func addSubstance(item):
+	collectedSubstances.append(item)
+	ingredientAdded = true
 
 
 

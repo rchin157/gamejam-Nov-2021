@@ -17,13 +17,14 @@ func _ready():
 
 func interact():
 	$CanvasLayer/Dialogue.show()
-	if checkLastStepCompleted() or Items.currentStep == -1:
+	if Items.ingredientAdded or Items.currentStep == -1:
 		if Items.currentStep == Items.lastStep:
 			#show end of game dialogue
 			say("Thats everything, finish it off with a dash of fulminate.")
 		else:
 			# give new hint
 			Items.currentStep = Items.currentStep + 1
+			Items.ingredientAdded = false
 			var nextItem = Items.getRequirement(Items.currentStep)
 			var details = Items.getInfoStrings(nextItem)
 			var option = rng.randi_range(0, 3)
