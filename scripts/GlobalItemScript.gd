@@ -30,6 +30,7 @@ var ingredientAdded = false
 var collectedSubstances = []
 var potColour = Color(1, 1, 1)
 var fulminate
+var currentHint = ""
 
 var win = true
 
@@ -110,6 +111,7 @@ func gameStart():
 	playerHasLeft = false
 	reorganizeExplained = false
 	firstSubstance = true
+	currentHint = ""
 	
 	fulminate = itemObject.new()
 	fulminate.ID = -1

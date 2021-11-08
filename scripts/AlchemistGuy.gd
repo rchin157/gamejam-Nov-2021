@@ -2,7 +2,6 @@ extends Area2D
 
 var player = null
 
-var currentHint = ""
 
 var rng = RandomNumberGenerator.new()
 
@@ -34,30 +33,30 @@ func interact():
 				# simply ask by item name
 				var dopt = rng.randi_range(0, 1)
 				if dopt == 0:
-					currentHint = "Go get a dash of %s and put it in the pot" % details[4]
+					Items.currentHint = "Go get a dash of %s and put it in the pot" % details[4]
 				else:
-					currentHint = "Procure %s. And make it quick." % details[4]
-				say(currentHint)
+					Items.currentHint = "Procure %s. And make it quick." % details[4]
+				say(Items.currentHint)
 			elif option == 1:
 				# ask by description
 				var dopt = rng.randi_range(0, 1)
 				if dopt == 0:
-					currentHint = "Go get a dash of... whatever that %s %s substance is, in the %s flask. It smells %s and the resonance should be %s. I can't be foggled to remember the name." % [details[2], details[1], details[3], details[0], details[5]]
+					Items.currentHint = "Go get a dash of... whatever that %s %s substance is, in the %s flask. It smells %s and the resonance should be %s. I can't be foggled to remember the name." % [details[2], details[1], details[3], details[0], details[5]]
 				else:
-					currentHint = "Add some of that %s %s substance in the %s flask to the alembic. Smells %s and has %s resonance. You know the one. At least you should." % [details[2], details[1], details[3], details[0], details[5]]
-				say(currentHint)
+					Items.currentHint = "Add some of that %s %s substance in the %s flask to the alembic. Smells %s and has %s resonance. You know the one. At least you should." % [details[2], details[1], details[3], details[0], details[5]]
+				say(Items.currentHint)
 			else:
 				# ask by alternate name
 				var dopt = rng.randi_range(0, 1)
 				if dopt == 0:
-					currentHint = "Next is a dash of %s, or at least something similar. Go on then." % Items.bookNames[nextItem.ID]
+					Items.currentHint = "Next is a dash of %s, or at least something similar. Go on then." % Items.bookNames[nextItem.ID]
 				else:
-					currentHint = "A substance similar to %s. Go add it to the alchemic apparatus." % Items.bookNames[nextItem.ID]
-				say(currentHint)
+					Items.currentHint = "A substance similar to %s. Go add it to the alchemic apparatus." % Items.bookNames[nextItem.ID]
+				say(Items.currentHint)
 		
 	else:
 		# tell them to fuck off
-		say("Didn't you hear me the first time? %s Hurry up and put a dash into the cauldron." % currentHint)
+		say("Didn't you hear me the first time? %s Hurry up and put a dash into the cauldron." % Items.currentHint)
 
 
 func _on_AlchGuy_area_entered(area):

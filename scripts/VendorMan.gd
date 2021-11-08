@@ -25,7 +25,7 @@ func _ready():
 #	pass
 
 func drawingPassed():
-	var give = Items.allVItems[Items.currentStep]
+	var give = Items.allVItems[Items.currentStep+1]
 	
 	if checkValidItem(give):
 		Items.changeHeld(give)
