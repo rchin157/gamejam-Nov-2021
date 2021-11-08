@@ -22,6 +22,7 @@ var allItems = [];
 var allVItems = [];
 
 # recipe progress tracking
+var firstSubstance = true
 var currentStep = -1
 var lastStep
 var rng = RandomNumberGenerator.new()
@@ -108,6 +109,7 @@ func gameStart():
 	currentRoom = 0
 	playerHasLeft = false
 	reorganizeExplained = false
+	firstSubstance = true
 	
 	fulminate = itemObject.new()
 	fulminate.ID = -1

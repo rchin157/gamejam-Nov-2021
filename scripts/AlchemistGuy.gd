@@ -17,7 +17,9 @@ func _ready():
 
 func interact():
 	$CanvasLayer/Dialogue.show()
-	if Items.ingredientAdded or Items.currentStep == -1:
+	if Items.ingredientAdded or Items.firstSubstance:# or Items.currentStep == -1:
+		if Items.firstSubstance:
+			Items.firstSubstance = false
 		if Items.currentStep == Items.lastStep:
 			#show end of game dialogue
 			say("Thats everything, finish it off with a dash of this fulminate.")
